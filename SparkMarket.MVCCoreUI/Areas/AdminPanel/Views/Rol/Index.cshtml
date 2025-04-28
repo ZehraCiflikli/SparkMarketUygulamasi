@@ -1,0 +1,473 @@
+﻿@using SparkMarket.Model.ViewModel.Areas.AdminPanel
+@section ContentHeader
+{
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalRolEkle">
+        Birim Ekle
+    </button>
+}
+
+@model RolIndexViewModel
+
+<!-- DataTable -->
+
+<div class="col-12">
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Rol Listesi</h3>
+        </div>
+        
+        <div class="card-body">
+            <table id="tblRoller" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Rol Adı</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<!--DataTable-->
+
+<form id="frmRolEkle">
+    <div class="modal fade" id="modalRolEkle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Rol Ekleme Paneli</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Rol Adı</label>
+                            <input type="text" class="form-control" asp-for="RolAdi" placeholder="Rol Adı">
+                        </div>
+
+                    </div>
+                    <!-- /.card-body -->
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">VAZGEÇ</button>
+                    <button type="button" id="btnRolEkle" class="btn btn-primary">KAYDET</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</form>
+
+
+<form id="frmRolGuncelle">
+    <div class="modal fade" id="modalRolGuncelle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Rol Güncelleme Paneli</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="card-body">
+
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="GId">
+
+                            <label>Rol Adı</label>
+                            <input type="text" class="form-control" id="GRolAdi" placeholder="Rol Adı">
+                        </div>
+
+                    </div>
+                    <!-- /.card-body -->
+
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">VAZGEÇ</button>
+                    <button type="button" id="btnRolGuncelle" class="btn btn-primary">GÜNCELLE</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</form>
+
+
+
+
+@section Styles {
+
+    <link href="~/adminassets/plugins/bootstrap-switch/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" />
+
+    <style>
+        .select2-container .select2-selection--single {
+            height: 40px;
+        }
+    </style>
+
+}
+
+
+
+@section Scripts {
+        var table;
+    <script>
+                table = $("#tblRoller").DataTable({
+                    "dom": "Bfrtip",
+                    "responsive": true,
+                    "lengthChange": true,
+                    "pageLength": 10,
+                    "autoWidth": false,
+            "buttons": ["excel", "pdf", "print"],
+                    language: {
+                        url: '/json/datatablestr.json',
+                    },
+                    ajax: { url: '/AdminPanel/Rol/List', type: 'post' },
+                    columns: [
+                        { data: 'id', visible: false },
+                        { data: 'rolAdi' },
+                        { data: 'aktif' },
+                        { data: 'id' },
+                        { data: 'id' },
+
+                    ],
+                    columnDefs: [
+
+
+                        {
+                            targets: 2,
+                            render: function (data, type, row, meta) {
+
+                                var rid = row["id"];
+
+                                if (data)
+
+                            return '<input rid=' + rid + '  type= "checkbox" data-on-text="AKTİF" data-off-text="PASİF" name = "my-checkbox" checked data-bootstrap-switch data-off-color="danger" class="chkAktif" data-on-color="success" > ';
+
+
+                                else
+
+                            return '<input rid=' + rid + '  type= "checkbox" data-on-text="AKTİF" data-off-text="PASİF" name = "my-checkbox"  data-bootstrap-switch data-off-color="danger" class="chkAktif" data-on-color="success" > ';
+
+                            }
+                        },
+
+                        {
+                            targets: 3,
+                            render: function (data, type, row, meta) {
+
+                        return "<a class='btn btn-info btnDuzenle' rid=" + data + ">   <i class='fas fa-pencil-alt'></i>DÜZENLE</a > ";
+
+                            }
+                        },
+
+                        {
+                            targets: 4,
+                            render: function (data, type, row, meta) {
+
+                        return "<a class='btn btn-danger btnSil' rid=" + data + "><i class='fas fa-trash'></i> SİL</a > ";
+                            }
+                        },
+
+                    ],
+
+                    initComplete: function (settings, json) {
+
+                        // Datatable initilize olduğunda
+                        $("input[data-bootstrap-switch]").each(function () {
+                            $(this).bootstrapSwitch();
+                        })
+
+
+                    },
+
+                    drawCallback: function () {
+
+                        // Arama Yapıldığında, Sayfalama Yapıldığında, Sıralama Yapıldığında Draw yapılıyor
+                        $("input[data-bootstrap-switch]").each(function () {
+                            $(this).bootstrapSwitch();
+                        })
+
+
+
+                    }
+
+
+
+                }).buttons().container().appendTo('#tblRoller_wrapper .col-md-6:eq(0)');
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+                    $("#btnRolEkle").click(function () {
+
+                        var rl = {
+                            rolAdi: $("#RolAdi").val(),
+
+                        };
+
+                        $.ajax({
+                            url: "/AdminPanel/Rol/Add",
+                            dataType: "json",
+                            method: "post",
+                            data: { r: rl },
+                            success: function (a) {
+                                if (a.result) {
+
+                                    var table = new DataTable('#tblRoller');
+                                    table.ajax.reload(null, false);
+
+                                    Swal.fire({
+                                        title: "İşlem Başarılı",
+                                        text: "Ürün Başarıyla Eklendi.",
+                                        icon: "success"
+                                    });
+
+                                }
+
+                            },
+                            error: function () {
+
+                            }
+
+                        });
+
+                    });
+
+        ////////////////////////////////////////////////////////////////////////////////////////
+
+
+                $(document).on('switchChange.bootstrapSwitch', '.chkAktif', function (event, state) {
+
+                    var swal = Swal.fire({
+                        title: "LÜTFEN BEKLEYİNİZ...",
+                        html: "İşleminiz Yapılıyor",
+                        timerProgressBar: true,
+                        didOpen: () => {
+
+                            Swal.showLoading();
+
+                        },
+                    });
+
+                    var id = $(this).attr('rid');
+                    var aktifpasif = state;
+                    $.ajax({
+                        url: "/AdminPanel/Rol/AktifPasif",
+                        type: "post",
+                        dataType: "json",
+                        data: { id: id, aktif: aktifpasif },
+                        success: function (r) {
+
+
+                            swal.close();
+                            if (r.result) {
+                                Swal.fire({
+                                    title: "İŞLEM BAŞARILI",
+                                    text: r.mesaj,
+                                    icon: "success"
+                                });
+                            }
+                        },
+                        error: function () {
+
+                        }
+                    }
+                    );
+
+
+                });
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                $(document).on('click', '.btnDuzenle', function () {
+                    var swal = Swal.fire({
+                        title: "LÜTFEN BEKLEYİNİZ...",
+                        html: "İşleminiz Yapılıyor",
+                        timerProgressBar: true,
+                        didOpen: () => {
+
+                            Swal.showLoading();
+
+                        },
+                    });
+
+                    var id = $(this).attr('rid');
+                    $("#GId").val(id);
+
+                    $.ajax({
+                        url: "/AdminPanel/Rol/GetRol",
+                        type: "post",
+                        dataType: "json",
+                        data: { id: id },
+                        success: function (r) {
+
+                            if (r.result) {
+
+                                $("#GRolAdi").val(r.model.rolAdi);
+
+
+                                $("#modalRolGuncelle").modal('show');
+                            }
+                            swal.close();
+
+
+                        },
+                        error: function () {
+
+                        }
+                    }
+                    );
+
+
+                });
+
+                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                $(document).on('click', '#btnRolGuncelle', function () {
+
+
+                    var swal = Swal.fire({
+                        title: "LÜTFEN BEKLEYİNİZ...",
+                        html: "İşleminiz Yapılıyor",
+                        timerProgressBar: true,
+                        didOpen: () => {
+
+                            Swal.showLoading();
+
+                        },
+                    });
+
+                    var formData = new FormData();
+
+
+
+                    var RolAdi = $("#GRolAdi").val();
+                    var Id = $("#GId").val();
+
+                    formData.append("RolAdi", RolAdi)
+
+                    formData.append("Id", Id)
+
+                    $.ajax({
+                        url: "/AdminPanel/Rol/Update",
+                        type: "post",
+                        dataType: "json",
+                        processData: false,
+                        contentType: false,
+                        data: formData,
+                        success: function (r) {
+
+
+
+                            swal.close();
+                            if (r.result) {
+                                Swal.fire({
+                                    title: "İŞLEM BAŞARILI",
+                                    text: r.mesaj,
+                                    icon: "success"
+                                });
+
+                        $("#modalRolGuncelle").modal("hide");
+
+                        $("#tblRoller").DataTable().ajax.reload();
+                            }
+
+                                    
+
+
+
+                        },
+
+                        error: function () {
+
+                        }
+
+                    });
+
+                   
+
+
+                });
+
+
+
+                //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+                        $(document).on('click', '.btnSil', function () {
+
+
+                            var id = $(this).attr("rid");
+
+                            Swal.fire({
+                                title: "UYARI",
+                                text: "Ürün Silinecek Emin Misiniz?",
+                                icon: "warning",
+                                showCancelButton: true,
+                                confirmButtonColor: "#3085d6",
+                                cancelButtonColor: "#d33",
+                                confirmButtonText: "SİL!",
+                                cancelButtonText: "VAZGEÇ!"
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+
+
+                                    $.ajax({
+                                        url: "/AdminPanel/Rol/Delete",
+                                        dataType: "json",
+                                        method: "post",
+                                        data: { id: id },
+                                        success: function (r) {
+
+                                            if (r.result) {
+                                                Swal.fire({
+                                                    title: "İşlem Başarılı",
+                                                    text: "Ürün Başarıyla Silindi.",
+                                                    icon: "success"
+                                                });
+
+                                                 $("#tblRoller").DataTable().ajax.reload();
+
+                                            }
+
+                                        },
+                                        error: function () {
+
+
+                                        }
+
+
+                                    });
+
+
+
+                                }
+                            });
+
+                        });
+
+
+
+
+    </script>
+}

@@ -1,0 +1,759 @@
+﻿@section ContentHeader
+{
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalMarkaEkle">
+        Marka Ekle
+    </button>
+}
+
+@model MarkaIndexViewModel
+<div class="col-12">
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Marka Listesi</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <table id="tblMarkalar" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Marka Adı</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+
+</div>
+
+@section Styles {
+
+    <link href="~/adminassets/plugins/bootstrap-switch/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" />
+
+    <style>
+        .select2-container .select2-selection--single {
+            height: 40px;
+        }
+    </style>
+
+}
+<form id="frmMarkaEkle">
+    <div class="modal fade" id="modalMarkaEkle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Marka Ekleme Paneli</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Marka Adı</label>
+                            <input type="text" class="form-control" asp-for="MarkaAdi" placeholder="Marka Adı">
+                        </div>
+                    </div>
+
+
+                    <!-- /.card-body -->
+
+
+
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">VAZGEÇ</button>
+                    <button type="button" id="btnMarkaEkle" class="btn btn-primary">KAYDET</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</form>
+
+<form id="frmMarkaGuncelle">
+    <div class="modal fade" id="modalMarkaGuncelle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Marka Güncelleme Paneli</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="GId">
+
+                            <label>Birim Adı</label>
+                            <input type="text" class="form-control" id="GMarkaAdi" placeholder="Marka Adı">
+                        </div>
+
+                    </div>
+                    <!-- /.card-body -->
+
+
+
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">VAZGEÇ</button>
+                    <button type="button" id="btnMarkaGuncelle" class="btn btn-primary">GÜNCELLE</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</form>
+
+
+@section Scripts {
+    <script>
+        var table;
+        $(function () {
+            table = $("#tblMarkalar").DataTable({
+                "dom": "Bfrtip",
+                "responsive": true,
+                "lengthChange": true,
+                "pageLength": 10,
+                "autoWidth": false,
+                "buttons": ["csv", "excel", "pdf", "print", "colvis"],
+                language: {
+                    url: '/json/datatablestr.json',
+                },
+                ajax: { url: '/AdminPanel/Marka/List', type: 'post' },
+                columns: [
+                    { data: 'id', visible: false },
+                    { data: 'markaAdi' },
+                    { data: 'aktif' },
+                    { data: 'id' },
+                    { data: 'id' },
+
+                ],
+                columnDefs: [
+
+
+                    {
+                        targets: 2,
+                        render: function (data, type, row, meta) {
+
+                            var katid = row["id"];
+
+
+                            if (data)
+
+                                return '<input katid=' + katid + '  type= "checkbox" data-on-text="AKTİF" data-off-text="PASİF" name = "my-checkbox" checked data-bootstrap-switch data-off-color="danger" class="chkAktif" data-on-color="success" > ';
+
+
+                            else
+
+                                return '<input katid=' + katid + '  type= "checkbox" data-on-text="AKTİF" data-off-text="PASİF" name = "my-checkbox"  data-bootstrap-switch data-off-color="danger" class="chkAktif" data-on-color="success" > ';
+
+                        }
+                    },
+
+                    {
+                        targets: 3,
+                        render: function (data, type, row, meta) {
+
+                            return "<a class='btn btn-info btnDuzenle' katid=" + data + ">   <i class='fas fa-pencil-alt'></i> DÜZENLE</a > ";
+
+                        }
+                    },
+
+                    {
+                        targets: 4,
+                        render: function (data, type, row, meta) {
+
+                            return "<a class='btn btn-danger btnSil' katid=" + data + "><i class='fas fa-trash'></i> SİL</a > ";
+                        }
+                    },
+
+
+
+
+                ],
+
+                initComplete: function (settings, json) {
+
+                    // Datatable initilize olduğunda
+                    $("input[data-bootstrap-switch]").each(function () {
+                        $(this).bootstrapSwitch();
+                    })
+
+                    $('.select2').select2();
+
+                },
+
+                drawCallback: function () {
+
+                    // Arama Yapıldığında, Sayfalama Yapıldığında, Sıralama Yapıldığında Draw yapılıyor
+                    $("input[data-bootstrap-switch]").each(function () {
+                        $(this).bootstrapSwitch();
+                    })
+
+                    $('.select2').select2();
+
+                }
+
+
+
+            }).buttons().container().appendTo('#tblMarkalar_wrapper .col-md-6:eq(0)');
+
+        })
+
+        $("#btnMarkaEkle").click(function () {
+
+            var swal = Swal.fire({
+                title: "LÜTFEN BEKLEYİNİZ...",
+                html: "İşleminiz Yapılıyor",
+                timerProgressBar: true,
+                didOpen: () => {
+
+                    Swal.showLoading();
+
+                },
+            });
+
+            var formData = new FormData();
+
+
+            var MarkaAdi = $("#MarkaAdi").val();
+
+
+
+            formData.append("MarkaAdi", MarkaAdi)
+
+
+            $.ajax({
+                url: "/AdminPanel/Marka/Add",
+                type: "post",
+                dataType: "json",
+                processData: false,
+                contentType: false,
+                data: formData,
+                success: function (r) {
+
+                    // ---------------Datatable Yok Edildi---------------
+
+                    $("#tblMarkalar").DataTable().destroy();
+                    //-------------------------------------------------
+
+                    // ---------------Datatable Yeniden Oluşturuluyor.---------------
+
+
+                    table = $("#tblMarkalar").DataTable({
+                        "dom": "Bfrtip",
+                        "responsive": true,
+                        "lengthChange": true,
+                        "pageLength":10,
+                        "autoWidth": false,
+                        "buttons": ["csv", "excel", "pdf", "print", "colvis"],
+                        language: {
+                            url: '/json/datatablestr.json',
+                        },
+                        ajax: { url: '/AdminPanel/Marka/List', type: 'post' },
+                        columns: [
+                            { data: 'id', visible: false },
+                            { data: 'markaAdi' },
+                            { data: 'aktif' },
+                            { data: 'id' },
+                            { data: 'id' },
+
+                        ],
+                        columnDefs: [
+
+
+                            {
+                                targets: 2,
+                                render: function (data, type, row, meta) {
+
+                                    var katid = row["id"];
+
+
+                                    if (data)
+
+                                        return '<input katid=' + katid + '  type= "checkbox" data-on-text="AKTİF" data-off-text="PASİF" name = "my-checkbox" checked data-bootstrap-switch data-off-color="danger" class="chkAktif" data-on-color="success" > ';
+
+
+                                    else
+
+                                        return '<input katid=' + katid + '  type= "checkbox" data-on-text="AKTİF" data-off-text="PASİF" name = "my-checkbox"  data-bootstrap-switch data-off-color="danger" class="chkAktif" data-on-color="success" > ';
+
+                                }
+                            },
+
+                            {
+                                targets: 3,
+                                render: function (data, type, row, meta) {
+
+                                    return "<a class='btn btn-info btnDuzenle' katid=" + data + ">   <i class='fas fa-pencil-alt'></i> DÜZENLE</a > ";
+
+                                }
+                            },
+
+                            {
+                                targets: 4,
+                                render: function (data, type, row, meta) {
+
+                                    return "<a class='btn btn-danger btnSil' katid=" + data + "><i class='fas fa-trash'></i> SİL</a > ";
+                                }
+                            },
+
+
+
+
+                        ],
+
+                        initComplete: function (settings, json) {
+
+                            // Datatable initilize olduğunda
+                            $("input[data-bootstrap-switch]").each(function () {
+                                $(this).bootstrapSwitch();
+                            })
+
+                            $('.select2').select2();
+
+                        },
+
+                        drawCallback: function () {
+
+                            // Arama Yapıldığında, Sayfalama Yapıldığında, Sıralama Yapıldığında Draw yapılıyor
+                            $("input[data-bootstrap-switch]").each(function () {
+                                $(this).bootstrapSwitch();
+                            })
+
+                            $('.select2').select2();
+
+                        }
+
+                    }).buttons().container().appendTo('#tblMarkalar_wrapper .col-md-6:eq(0)');
+
+
+                    swal.close();
+                    if (r.result) {
+                        Swal.fire({
+                            title: "İŞLEM BAŞARILI",
+                            text: r.mesaj,
+                            icon: "success"
+                        });
+                    }
+
+
+
+
+                },
+                error: function () {
+
+                }
+            }
+            );
+
+
+
+        });
+
+
+
+
+
+    </script>
+    <script>
+
+        $(function () {
+
+            $(document).on('switchChange.bootstrapSwitch', '.chkAktif', function (event, state) {
+
+                var swal = Swal.fire({
+                    title: "LÜTFEN BEKLEYİNİZ...",
+                    html: "İşleminiz Yapılıyor",
+                    timerProgressBar: true,
+                    didOpen: () => {
+
+                        Swal.showLoading();
+
+                    },
+                });
+
+                var id = $(this).attr('katid');
+                var aktifpasif = state;
+                $.ajax({
+                    url: "/AdminPanel/Marka/AktifPasif",
+                    type: "post",
+                    dataType: "json",
+                    data: { id: id, aktif: aktifpasif },
+                    success: function (r) {
+
+
+                        swal.close();
+                        if (r.result) {
+                            Swal.fire({
+                                title: "İŞLEM BAŞARILI",
+                                text: r.mesaj,
+                                icon: "success"
+                            });
+                        }
+                    },
+                    error: function () {
+
+                    }
+                }
+                );
+
+
+
+            });
+
+            $(document).on('click', '.btnDuzenle', function () {
+                var swal = Swal.fire({
+                    title: "LÜTFEN BEKLEYİNİZ...",
+                    html: "İşleminiz Yapılıyor",
+                    timerProgressBar: true,
+                    didOpen: () => {
+
+                        Swal.showLoading();
+
+                    },
+                });
+
+                var id = $(this).attr('katid');
+                $("#GId").val(id);
+
+                $.ajax({
+                    url: "/AdminPanel/Marka/GetMarka",
+                    type: "post",
+                    dataType: "json",
+                    data: { id: id },
+                    success: function (r) {
+
+                        if (r.result) {
+                            $("#GMarkaAdi").val(r.model.MarkaAdi);
+                             $("#modalMarkaGuncelle").modal('show');
+                        }
+                        swal.close();
+
+
+                    },
+                    error: function () {
+
+                    }
+                }
+                );
+
+
+
+            });
+            $(document).on('click', '#btnMarkaGuncelle', function () {
+
+
+
+                var swal = Swal.fire({
+                    title: "LÜTFEN BEKLEYİNİZ...",
+                    html: "İşleminiz Yapılıyor",
+                    timerProgressBar: true,
+                    didOpen: () => {
+
+                        Swal.showLoading();
+
+                    },
+                });
+
+                var formData = new FormData();
+
+
+                var MarkaAdi = $("#GMarkaAdi").val();
+                var Id = $("#GId").val();
+
+                formData.append("MarkaAdi", MarkaAdi)
+                formData.append("Id", Id)
+                $.ajax({
+                    url: "/AdminPanel/Marka/Update",
+                    type: "post",
+                    dataType: "json",
+                    processData: false,
+                    contentType: false,
+                    data: formData,
+                    success: function (r) {
+
+                        // ---------------Datatable Yok Edildi---------------
+
+                        $("#tblMarkalar").DataTable().destroy();
+                        //-------------------------------------------------
+
+                        // ---------------Datatable Yeniden Oluşturuluyor.---------------
+
+
+                        table = $("#tblMarkalar").DataTable({
+                            "dom": "Bfrtip",
+                            "responsive": true,
+                            "lengthChange": true,
+                            "pageLength": 10,
+                            "autoWidth": false,
+                            "buttons": ["csv", "excel", "pdf", "print", "colvis"],
+                            language: {
+                                url: '/json/datatablestr.json',
+                            },
+                            ajax: { url: '/AdminPanel/Marka/List', type: 'post' },
+                            columns: [
+                                { data: 'id', visible: false },
+                                { data: 'markaAdi' },
+                                { data: 'aktif' },
+                                { data: 'id' },
+                                { data: 'id' },
+
+                            ],
+                            columnDefs: [
+
+
+                                {
+                                    targets: 2,
+                                    render: function (data, type, row, meta) {
+
+                                        var katid = row["id"];
+
+
+                                        if (data)
+
+                                            return '<input katid=' + katid + '  type= "checkbox" data-on-text="AKTİF" data-off-text="PASİF" name = "my-checkbox" checked data-bootstrap-switch data-off-color="danger" class="chkAktif" data-on-color="success" > ';
+
+
+                                        else
+
+                                            return '<input katid=' + katid + '  type= "checkbox" data-on-text="AKTİF" data-off-text="PASİF" name = "my-checkbox"  data-bootstrap-switch data-off-color="danger" class="chkAktif" data-on-color="success" > ';
+
+                                    }
+                                },
+
+                                {
+                                    targets: 3,
+                                    render: function (data, type, row, meta) {
+
+                                        return "<a class='btn btn-info btnDuzenle' katid=" + data + ">   <i class='fas fa-pencil-alt'></i> DÜZENLE</a > ";
+
+                                    }
+                                },
+
+                                {
+                                    targets: 4,
+                                    render: function (data, type, row, meta) {
+
+                                        return "<a class='btn btn-danger btnSil' katid=" + data + "><i class='fas fa-trash'></i> SİL</a > ";
+                                    }
+                                },
+
+
+
+
+                            ],
+
+                            initComplete: function (settings, json) {
+
+                                // Datatable initilize olduğunda
+                                $("input[data-bootstrap-switch]").each(function () {
+                                    $(this).bootstrapSwitch();
+                                })
+
+                                $('.select2').select2();
+
+                            },
+
+                            drawCallback: function () {
+
+                                // Arama Yapıldığında, Sayfalama Yapıldığında, Sıralama Yapıldığında Draw yapılıyor
+                                $("input[data-bootstrap-switch]").each(function () {
+                                    $(this).bootstrapSwitch();
+                                })
+
+                                $('.select2').select2();
+
+                            }
+
+                        }).buttons().container().appendTo('#tblMarkalar_wrapper .col-md-6:eq(0)');
+
+
+                        swal.close();
+                        if (r.result) {
+                            Swal.fire({
+                                title: "İŞLEM BAŞARILI",
+                                text: r.mesaj,
+                                icon: "success"
+                            });
+                        }
+
+
+
+
+                    },
+                    error: function () {
+
+                    }
+                }
+                );
+
+
+
+            });
+
+
+
+        $(document).on('click', '.btnSil', function () {
+            var id = $(this).attr('katid');
+
+
+            Swal.fire({
+                title: 'Emin misiniz?',
+                text: 'Bu birimi silmek istediğinize emin misiniz?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Evet, sil',
+                cancelButtonText: 'Vazgeç'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Onay verilirse silme isteğini atıyoruz
+                    $.ajax({
+                        url: '/AdminPanel/Marka/Delete',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: { id: id },
+                        success: function (r) {
+                            if (r.result) {
+
+                                 // ---------------Datatable Yok Edildi---------------
+
+                        $("#tblMarkalar").DataTable().destroy();
+                        //-------------------------------------------------
+
+                        // ---------------Datatable Yeniden Oluşturuluyor.---------------
+
+
+                        table = $("#tblMarkalar").DataTable({
+                            "dom": "Bfrtip",
+                            "responsive": true,
+                            "lengthChange": true,
+                            "pageLength": 10,
+                            "autoWidth": false,
+                            "buttons": ["csv", "excel", "pdf", "print", "colvis"],
+                            language: {
+                                url: '/json/datatablestr.json',
+                            },
+                            ajax: { url: '/AdminPanel/Marka/List', type: 'post' },
+                            columns: [
+                                { data: 'id', visible: false },
+                                { data: 'markaAdi' },
+                                { data: 'aktif' },
+                                { data: 'id' },
+                                { data: 'id' },
+
+                            ],
+                            columnDefs: [
+
+
+                                {
+                                    targets: 2,
+                                    render: function (data, type, row, meta) {
+
+                                        var katid = row["id"];
+
+
+                                        if (data)
+
+                                            return '<input katid=' + katid + '  type= "checkbox" data-on-text="AKTİF" data-off-text="PASİF" name = "my-checkbox" checked data-bootstrap-switch data-off-color="danger" class="chkAktif" data-on-color="success" > ';
+
+
+                                        else
+
+                                            return '<input katid=' + katid + '  type= "checkbox" data-on-text="AKTİF" data-off-text="PASİF" name = "my-checkbox"  data-bootstrap-switch data-off-color="danger" class="chkAktif" data-on-color="success" > ';
+
+                                    }
+                                },
+
+                                {
+                                    targets: 3,
+                                    render: function (data, type, row, meta) {
+
+                                        return "<a class='btn btn-info btnDuzenle' katid=" + data + ">   <i class='fas fa-pencil-alt'></i> DÜZENLE</a > ";
+
+                                    }
+                                },
+
+                                {
+                                    targets: 4,
+                                    render: function (data, type, row, meta) {
+
+                                        return "<a class='btn btn-danger btnSil' katid=" + data + "><i class='fas fa-trash'></i> SİL</a > ";
+                                    }
+                                },
+
+
+
+
+                            ],
+
+                            initComplete: function (settings, json) {
+
+                                // Datatable initilize olduğunda
+                                $("input[data-bootstrap-switch]").each(function () {
+                                    $(this).bootstrapSwitch();
+                                })
+
+                                $('.select2').select2();
+
+                            },
+
+                            drawCallback: function () {
+
+                                // Arama Yapıldığında, Sayfalama Yapıldığında, Sıralama Yapıldığında Draw yapılıyor
+                                $("input[data-bootstrap-switch]").each(function () {
+                                    $(this).bootstrapSwitch();
+                                })
+
+                                $('.select2').select2();
+
+                            }
+
+                        }).buttons().container().appendTo('#tblMarkalar_wrapper .col-md-6:eq(0)');
+
+
+                                Swal.fire({
+                                    title: 'Silindi!',
+                                    text: r.mesaj,
+                                    icon: 'success',
+                                    confirmButtonText: 'Tamam'
+                                }).then(() => {
+
+                                });
+                            } else {
+                                // Sunucudan result=false döndüyse
+                                Swal.fire('Hata!', 'Silme işlemi başarısız.', 'error');
+                            }
+                        },
+                        error: function () {
+
+                        }
+                    });
+                }
+            });
+        });
+
+
+            });
+
+
+
+
+    </script>
+
+}

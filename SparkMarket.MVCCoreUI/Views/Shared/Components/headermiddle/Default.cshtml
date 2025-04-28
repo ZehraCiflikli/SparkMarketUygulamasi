@@ -1,0 +1,64 @@
+﻿@using SparkMarket.MVCCoreUI.Filters
+@inject ISessionManager _session
+
+<div class="header-middle">
+    <!--header-middle-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="logo pull-left">
+                    <a href="index.html"><img src="/frontassets/images/home/logo.png" alt="" /></a>
+                </div>
+                <div class="btn-group pull-right">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                            TR
+                            <span class="caret"></span>
+                        </button>
+                        @* <ul class="dropdown-menu">
+                        <li><a href="#">Canada</a></li>
+                        <li><a href="#">UK</a></li>
+                        </ul> *@
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                            TL
+                            <span class="caret"></span>
+                        </button>
+                        @* <ul class="dropdown-menu">
+                        <li><a href="#">Canadian Dollar</a></li>
+                        <li><a href="#">Pound</a></li>
+                        </ul> *@
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="shop-menu pull-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#"><i class="fa fa-user"></i> Hesabım</a></li>
+                        <li><a href="#"><i class="fa fa-star"></i> İstek Listesi</a></li>
+                        <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Sepetim</a></li>
+
+                        @{
+                            if (_session.AktifKullanici == null)
+                            {
+                                <li><a href="/Kullanici/Login"><i class="fa fa-lock"></i> Giriş Yap</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Çıkış yap</a></li>
+                            }
+                        }
+
+
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--/header-middle-->

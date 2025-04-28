@@ -1,0 +1,25 @@
+﻿@model KategoriDTO
+
+<form action="/Home/KategoriEkle" method="post">
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label>Kategori Adı</label>
+                <input type="text" class="form-control" asp-for="KategoriAdi" placeholder="Banka Adı">
+            </div>
+            <div class="form-group">
+                <label>Açıklama</label>
+                <input type="text" class="form-control" asp-for="Aciklama" placeholder="Banka Adı">
+            </div>
+            <div class="form-group">
+                <label>Üst Kategori</label>
+              <select class="form-control" asp-for="UstKategoriId" asp-items="Model.KategoriList"></select>
+
+            </div>
+            <input type="submit" value="EKLE" />
+        </div>
+        @TempData["mesaj"]
+    </div>
+
+</form>
+

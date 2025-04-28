@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>SignalR Canlı Mesajlaşma</h2>
+
+<input type="text" id="userInput" placeholder="Adınız" />
+<input type="text" id="messageInput" placeholder="Mesajınız" />
+<button onclick="sendMessage()">Gönder</button>
+
+<ul id="messagesList"></ul>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/aspnet-signalr/signalr.min.js"></script>
+
+<script>
+
+    //-- Connection oluştur
+    const connection = new signalR.HubConnectionBuilder().withUrl("/MarketHub").build();
+
+
+    // Sunucudan mesaj geldiğinde otomatik tetiklenir.
+    connection.on("ReceiveMessage", (user, message) => {
+        // Hub classındaki bir metodun clienta tetikleyebeilceği metotları connection.on diyerek yazıyoruz.
+
+        const li = document.createElement("li");
+        li.textContent = `${user}: ${message}`;
+        document.getElementById("messagesList").appendChild(li);
+
+    });
+
+   
+
+
+
+
+    // SignalR bağlantısını başlat
+    connection.start().catch(err => console.error(err));
+
+    // Sunucuya mesaj göndermek için kullanılır.
+    function sendMessage() {
+        const user = document.getElementById("userInput").value;
+        const message = document.getElementById("messageInput").value;
+
+
+
+
+        connection.invoke("SendMessage", user, message).catch(err => console.error(err));
+    }
+
+    // invoke(), geri dönüş değeri olan(return eden) metodları çağırabilir.
+    //     send(), geri dönüş değeri istemeyen metodlar içindir.
+</script>
+
+// connection.on => serverdan tetiklenecek metotlar
+// connnection start=> başla
+// connection invoke => clientan hub classındaki metota talep gönderir. (geri dönüş değeri olan)
+// connection send =>clientan hub classındaki metota talep gönderir. (geri dönüş değeri olmayan)

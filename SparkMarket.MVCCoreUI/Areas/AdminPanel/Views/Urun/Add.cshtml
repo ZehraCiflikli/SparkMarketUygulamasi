@@ -1,0 +1,363 @@
+﻿@using SparkMarket.Model.Entity
+
+@model UrunAddViewModel
+@section ContentHeader
+{
+
+}
+<form id="FormUrunEkle" class="col-md-12">
+    @Html.AntiForgeryToken()
+    <div class="col-md-12">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Ürün Ekleme Paneli</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label asp-for="UrunAdi">Ürün Adı</label>
+                    <input asp-for="UrunAdi" type="text" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="UrunKodu">Ürün Kodu</label>
+                    <input asp-for="UrunKodu" type="text" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label>Kategori</label>
+                    <select asp-for="KategoriId" asp-items="@Model.KategoriListe" class="form-control custom-select">
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Marka</label>
+                    <select asp-for="MarkaId" asp-items="@Model.MarkaListe" class="form-control custom-select">
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Stok Birimi</label>
+                    <select asp-for="BirimId" asp-items="@Model.BirimListe" class="form-control custom-select">
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="Stok">Stok</label>
+                    <input asp-for="Stok" type="text" class="form-control">
+                </div>
+
+                <div class="form-group">
+
+                    <label>Kdv Oranı</label>
+                    <select asp-for="KdvId" asp-items="@Model.KdvListe" class="form-control custom-select">
+                    </select>
+
+
+                </div>
+
+                <div class="form-group">
+                    <div class="alert alert-warning">Ürün Fiyatları</div>
+
+                    @foreach (FiyatTipi tip in Model.FiyatTipleri)
+                    {
+                        <div class="form-group row">
+                            <label class="col-3">@tip.FiyatTipiAdi.ToUpper()</label>
+                            <input tip="@tip.Id" type="text" class="form-control col-9 txtFiyat" />
+                        </div>
+
+                    }
+
+
+                </div>
+
+                <div class="form-group">
+                    <label for="inputDescription">Ürün Açıklaması</label>
+                    <textarea asp-for="Aciklama" class="form-control" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+
+                    <div class="alert alert-warning">Ürün Resimleri</div>
+
+                    <div id="dropzone-container">
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+                <div class="form-group">
+                    <input id="btnUrunEkle" type="button" class="btn btn-success" value="ÜRÜN EKLE" />
+
+                </div>
+
+
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+</form>
+@section Scripts {
+
+    @*   <script src="/adminassets/plugins/dropzone/min/dropzone.min.js"></script> *@
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+
+    <script>
+
+        $(function () {
+            $("#btnUrunEkle").click(function () {
+                var form = $("#FormUrunEkle");
+
+
+                // Lütfen Bekleyiniz
+                var swal = Swal.fire({
+                    title: "LÜTFEN BEKLEYİNİZ...",
+                    html: "İşleminiz Yapılıyor",
+                    timerProgressBar: true,
+                    didOpen: () => {
+                        Swal.showLoading();
+                    },
+                });
+
+                //Lütfen bekleyiniz
+
+                $.ajax({
+                    url: "/AdminPanel/Urun/Add",
+                    type: "post",
+                    dataType: "json",
+                    data: form.serialize(),
+                    success: function (r) {
+
+                        if (r.result) {
+
+                            var id = r.id;
+
+
+                            var fiyatlar = [];
+                            $(".txtFiyat").each(function () {
+
+                                var tip = $(this).attr("tip");
+                                var fiyat = $(this).val();
+
+                                fiyatlar.push({ fiyatTipi: tip, fiyat: fiyat });
+                            });
+
+                            $.ajax({
+                                url: "/AdminPanel/Urun/AddFiyat",
+                                type: "post",
+                                dataType: "json",
+                                data: { fiyatlar: fiyatlar, id: id },
+                                success: function (r) {
+
+                                    if (r.result) {
+
+                                        window.location.href = "/AdminPanel/Urun/Index";
+
+                                    }
+
+                                },
+                                error: function () {
+
+                                }
+                            }
+                            );
+
+
+
+
+
+
+                        }
+
+
+
+
+
+
+
+                    },
+                    error: function () {
+
+                    }
+                }
+                );
+
+
+
+
+
+
+            });
+        })
+
+
+        $('#Aciklama').summernote();
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const container = document.getElementById("dropzone-container");
+
+            const dropzoneHtml = `
+                                            <div class="dropzone-wrapper mb-4">
+
+                                                <div class="dropzone dropzone-queue mb-2" id="dropzone">
+                                                    <div class="dropzone-panel mb-lg-0 mb-2">
+                                                        <a class="dropzone-select btn btn-sm btn-primary me-2">Dosya Seç</a>
+                                                        <a class="dropzone-remove-all btn btn-sm btn-light-primary">Sil</a>
+                                                    </div>
+                                                    <div class="dropzone-items wm-200px">
+                                                        <div class="dropzone-item" style="display:none">
+                                                            <div class="dropzone-file">
+                                                                <div class="dropzone-filename">
+                                                                    <span data-dz-name></span> <strong>(<span data-dz-size></span>)</strong>
+                                                                </div>
+                                                                <div class="dropzone-error" data-dz-errormessage></div>
+                                                            </div>
+                                                            <div class="dropzone-progress">
+                                                                <div class="progress">
+                                                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-dz-uploadprogress></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dropzone-toolbar">
+                                                                <span class="dropzone-delete" data-dz-remove><i class="bi bi-x fs-1"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            `;
+
+            // Oluşturulan HTML'i ekle
+            container.insertAdjacentHTML("beforeend", dropzoneHtml);
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const id = `#dropzone`;
+            const dropzone = document.querySelector(id);
+
+
+            var previewNode = dropzone.querySelector(".dropzone-item");
+            previewNode.id = "";
+            var previewTemplate = previewNode.parentNode.innerHTML;
+            previewNode.parentNode.removeChild(previewNode);
+
+
+            var myDropzone = new Dropzone(id, {
+                url: "/AdminPanel/Urun/FileUpload/",
+                parallelUploads: 20,
+                uploadMultiple: false,
+                maxFilesize: 5,
+                previewTemplate: previewTemplate,
+                previewsContainer: id + " .dropzone-items",
+                clickable: id + " .dropzone-select",
+                init: function () {
+
+
+
+
+                    //     this.emit("addedfile", mockFile);
+                    // this.emit("complete", mockFile);
+                    // const previewElement = mockFile.previewElement;
+                    // previewElement.style.display = "block"; // Başlangıçta gizlenmişse, görünür yap
+
+
+
+                }
+            });
+
+
+            myDropzone.on("sending", function (file, xhr, formData) {
+
+            });
+            myDropzone.on("addedfile", function (file) {
+                // Dropzone item'ı göster
+                const previewElement = file.previewElement;
+                previewElement.style.display = "block"; // Başlangıçta gizlenmişse, görünür yap
+            });
+
+            myDropzone.on("complete", function (file) {
+                // Yükleme tamamlandığında öğeyi görünür yap
+                const previewElement = file.previewElement;
+                previewElement.classList.add('dz-complete'); // `dz-complete` sınıfını ekleyerek görünür yap
+            });
+            // success event'inde her Dropzone'a özgü işlemleri yap
+            myDropzone.on("success", function (file, response) {
+
+
+                if (response.fileName) {
+                    // file.serverId = response.fileName;
+
+                    // Dosya adı ve boyutunu doğru şekilde güncelle
+                    const preview = file.previewElement;
+
+                    preview.querySelector("[data-dz-name]").textContent = response.fileName;
+                    preview.querySelector("[data-dz-size]").textContent = (file.size / 1024).toFixed(2) + " KB"; // KB olarak göster
+
+                    preview.querySelector("[data-dz-remove]").textContent = "Sil";
+
+
+                } else {
+                    console.error("⚠ Backend'den dosya adı dönmedi!");
+                }
+            });
+
+            myDropzone.on("removedfile", function (file) {
+
+
+                $.ajax({
+                    url: "/AdminPanel/Urun/DeleteFile",
+                    type: "DELETE",
+                    data: { fileName: file.name },
+                    success: function (data) {
+                        if (data.success) {
+                            console.log(` Dosya başarıyla silindi: ${file.name}`);
+                        } else {
+                            alert("Dosya silinemedi: " + data.message);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Silme hatası:", error);
+                        alert("Dosya silinirken bir hata oluştu!");
+                    }
+                });
+            });
+        });
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+    <style>
+        /* Dropzone item kapsayıcısını flex container yapalım */
+
+
+    </style>
+
+}

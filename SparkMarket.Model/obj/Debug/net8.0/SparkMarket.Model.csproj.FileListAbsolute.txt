@@ -1,0 +1,565 @@
+D:\SinanHoca\20241218\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20241218\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20241218\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20241218\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20241218\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20241218\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20241218\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20241218\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20241218\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20241218\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20241218\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20241220\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20241220\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20241220\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20241220\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20241220\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20241220\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20241220\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20241220\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20241220\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20241220\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20241220\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20241223\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20241225\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20241227\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20241229\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+E:\Vektörel\Dersler\6- Spark Market\78. Ders 06.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250108\efkan\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250110\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250113\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+C:\Users\ZEHRA\Downloads\81. Ders 13.01.2025-20250113T210525Z-001\81. Ders 13.01.2025\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250115\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250117\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250119\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250122\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250124\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250127\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250129\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250203\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250205\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250207\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250210\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+C:\Users\hasan\Desktop\Yeni klasör\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250214\20250212\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250217\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250219\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250221\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250224\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250228\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250303\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250307\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250310\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\20250312\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+D:\SinanHoca\SON\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.sourcelink.json
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.deps.json
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.dll
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\bin\Debug\net8.0\SparkMarket.Model.pdb
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.AssemblyReference.cache
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfoInputs.cache
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.AssemblyInfo.cs
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.csproj.CoreCompileInputs.cache
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\obj\Debug\net8.0\SparkMar.5CCF4C22.Up2Date
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.dll
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\obj\Debug\net8.0\refint\SparkMarket.Model.dll
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\obj\Debug\net8.0\SparkMarket.Model.pdb
+C:\Users\ZEHRA\Downloads\104. Ders-20250315T195839Z-001\104. Ders\SparkMarket\SparkMarket\SparkMarketUygulamasi\SparkMarket.Model\obj\Debug\net8.0\ref\SparkMarket.Model.dll

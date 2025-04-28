@@ -1,0 +1,467 @@
+﻿@using SparkMarket.Model.ViewModel.Areas.AdminPanel
+@section ContentHeader
+{
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalBirimEkle">
+        Birim Ekle
+    </button>
+}
+
+@model BirimIndexViewModel
+
+<div class="col-12">
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Birim Listesi</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <table id="tblBirimler" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Birim Adı</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+
+</div>
+
+@section Styles {
+
+    <link href="~/adminassets/plugins/bootstrap-switch/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" />
+
+    <style>
+        .select2-container .select2-selection--single {
+            height: 40px;
+        }
+    </style>
+
+}
+
+<form id="frmBirimEkle">
+    <div class="modal fade" id="modalBirimEkle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Birim Ekleme Paneli</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Birim Adı</label>
+                            <input type="text" class="form-control" asp-for="BirimAdi" placeholder="Birim Adı">
+                        </div>
+                        
+                    </div>
+                    <!-- /.card-body -->
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">VAZGEÇ</button>
+                    <button type="button" id="btnBirimEkle" class="btn btn-primary">KAYDET</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</form>
+
+
+
+
+
+
+<form id="frmBirimGuncelle">
+    <div class="modal fade" id="modalBirimGuncelle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Birim Güncelleme Paneli</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="GId">
+
+                            <label>Birim Adı</label>
+                            <input type="text" class="form-control" id="GBirimAdi" placeholder="Birim Adı">
+                        </div>
+                        
+                    </div>
+                    <!-- /.card-body -->
+
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">VAZGEÇ</button>
+                    <button type="button" id="btnBirimGuncelle" class="btn btn-primary">GÜNCELLE</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</form>
+
+
+@section Scripts {
+    var table;
+    <script>
+        table = $("#tblBirimler").DataTable({
+            "dom": "Bfrtip",
+            "responsive": true,
+            "lengthChange": true,
+            "pageLength": 10,
+            "autoWidth": false,
+            "buttons": ["csv", "excel", "pdf", "print", "colvis"],
+            language: {
+                url: '/json/datatablestr.json',
+            },
+            ajax: { url: '/AdminPanel/Birim/List', type: 'post' },
+            columns: [
+                { data: 'id', visible: false },
+                { data: 'birimAdi' },
+                { data: 'aktif' },
+                { data: 'id' },
+                { data: 'id' },
+
+            ],
+            columnDefs: [
+
+               
+                {
+                    targets: 2,
+                    render: function (data, type, row, meta) {
+
+                        var birid = row["id"];
+
+                        if (data)
+
+                            return '<input birid=' + birid + '  type= "checkbox" data-on-text="AKTİF" data-off-text="PASİF" name = "my-checkbox" checked data-bootstrap-switch data-off-color="danger" class="chkAktif" data-on-color="success" > ';
+
+
+                        else
+
+                            return '<input birid=' + birid + '  type= "checkbox" data-on-text="AKTİF" data-off-text="PASİF" name = "my-checkbox"  data-bootstrap-switch data-off-color="danger" class="chkAktif" data-on-color="success" > ';
+
+                    }
+                },
+
+                {
+                    targets: 3,
+                    render: function (data, type, row, meta) {
+
+                        return "<a class='btn btn-info btnDuzenle' birid=" + data + ">   <i class='fas fa-pencil-alt'></i>DÜZENLE</a > ";
+
+                    }
+                },
+
+                {
+                    targets: 4,
+                    render: function (data, type, row, meta) {
+
+                        return "<a class='btn btn-danger btnSil' birid=" + data + "><i class='fas fa-trash'></i> SİL</a > ";
+                    }
+                },
+
+            ],
+
+            initComplete: function (settings, json) {
+
+                // Datatable initilize olduğunda
+                $("input[data-bootstrap-switch]").each(function () {
+                    $(this).bootstrapSwitch();
+                })
+
+                
+            },
+
+            drawCallback: function () {
+
+                // Arama Yapıldığında, Sayfalama Yapıldığında, Sıralama Yapıldığında Draw yapılıyor
+                $("input[data-bootstrap-switch]").each(function () {
+                    $(this).bootstrapSwitch();
+                })
+
+               
+
+            }
+
+
+
+        }).buttons().container().appendTo('#tblBirimler_wrapper .col-md-6:eq(0)');
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        
+            $("#btnBirimEkle").click(function () {
+                
+                var brm = {
+                    birimAdi: $("#BirimAdi").val(),
+                   
+                };
+
+                $.ajax({
+                    url: "/AdminPanel/Birim/Add",
+                    dataType: "json",
+                    method: "post",
+                    data: { b: brm },
+                    success: function (a) {
+                        if (a.result) {
+
+                            var table = new DataTable('#tblBirimler');
+                            table.ajax.reload(null, false);
+
+                            Swal.fire({
+                                title: "İşlem Başarılı",
+                                text: "Ürün Başarıyla Eklendi.",
+                                icon: "success"
+                            });
+
+                        }
+
+                    },
+                    error: function () {
+
+                    }
+
+                });
+
+            });
+
+////////////////////////////////////////////////////////////////////////////////////////7
+
+
+        $(document).on('switchChange.bootstrapSwitch', '.chkAktif', function (event, state) {
+
+            var swal = Swal.fire({
+                title: "LÜTFEN BEKLEYİNİZ...",
+                html: "İşleminiz Yapılıyor",
+                timerProgressBar: true,
+                didOpen: () => {
+
+                    Swal.showLoading();
+
+                },
+            });
+
+            var id = $(this).attr('birid');
+            var aktifpasif = state;
+            $.ajax({
+                url: "/AdminPanel/Birim/AktifPasif",
+                type: "post",
+                dataType: "json",
+                data: { id: id, aktif: aktifpasif },
+                success: function (r) {
+
+
+                    swal.close();
+                    if (r.result) {
+                        Swal.fire({
+                            title: "İŞLEM BAŞARILI",
+                            text: r.mesaj,
+                            icon: "success"
+                        });
+                    }
+                },
+                error: function () {
+
+                }
+            }
+            );
+
+
+        });
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        $(document).on('click', '.btnDuzenle', function () {
+            var swal = Swal.fire({
+                title: "LÜTFEN BEKLEYİNİZ...",
+                html: "İşleminiz Yapılıyor",
+                timerProgressBar: true,
+                didOpen: () => {
+
+                    Swal.showLoading();
+
+                },
+            });
+
+            var id = $(this).attr('birid');
+            $("#GId").val(id);
+
+            $.ajax({
+                url: "/AdminPanel/Birim/GetBirim",
+                type: "post",
+                dataType: "json",
+                data: { id: id },
+                success: function (r) {
+
+                    if (r.result) {
+                        $("#GBirimAdi").val(r.model.birimAdi);
+                        
+                     
+                        //$("#GUstKategoriId").trigger("change"); 
+
+                     
+                        $("#modalBirimGuncelle").modal('show');
+                    }
+                    swal.close();
+
+
+                },
+                error: function () {
+
+                }
+            }
+            );
+
+
+        });
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        $(document).on('click', '#btnBirimGuncelle', function () {
+
+
+            var swal = Swal.fire({
+                title: "LÜTFEN BEKLEYİNİZ...",
+                html: "İşleminiz Yapılıyor",
+                timerProgressBar: true,
+                didOpen: () => {
+
+                    Swal.showLoading();
+
+                },
+            });
+
+            var formData = new FormData();
+
+          
+
+            var BirimAdi = $("#GBirimAdi").val();     
+            var Id = $("#GId").val();
+
+            formData.append("BirimAdi", BirimAdi)
+           
+            formData.append("Id", Id)
+
+            $.ajax({
+                url: "/AdminPanel/Birim/Update",
+                type: "post",
+                dataType: "json",
+                processData: false,
+                contentType: false,
+                data: formData,
+                success: function (r) {
+
+                     
+
+                    swal.close();
+                    if (r.result) {
+                        Swal.fire({
+                            title: "İŞLEM BAŞARILI",
+                            text: r.mesaj,
+                            icon: "success"
+                        });
+                    }
+
+
+                   
+
+                },
+                error: function () {
+
+                }
+            }
+            );
+
+            $("#modalBirimGuncelle").modal("hide");
+
+            $("#tblBirimler").DataTable().ajax.reload();
+
+
+        });
+
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+                $(document).on('click', '.btnSil', function () {
+
+
+                    var id = $(this).attr("birid");
+
+                    Swal.fire({
+                        title: "UYARI",
+                        text: "Ürün Silinecek Emin Misiniz?",
+                        icon: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        confirmButtonText: "SİL!",
+                        cancelButtonText: "VAZGEÇ!"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+
+
+                            $.ajax({
+                                url: "/AdminPanel/Birim/Delete",
+                                dataType: "json",
+                                method: "post",
+                                data: { id: id },
+                                success: function (r) {
+
+                                    if (r.result) {
+                                        Swal.fire({
+                                            title: "İşlem Başarılı",
+                                            text: "Ürün Başarıyla Silindi.",
+                                            icon: "success"
+                                        });
+
+                                         $("#tblBirimler").DataTable().ajax.reload();
+
+                                    }
+
+                                },
+                                error: function () {
+
+
+                                }
+
+
+                            });
+
+
+
+                        }
+                    });
+
+                });
+       
+
+
+
+    </script>
+}

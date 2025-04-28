@@ -1,0 +1,36 @@
+﻿@using SparkMarket.Model.ViewModel.Front
+@model KullniciSignupVm
+
+<div class="signup-form">
+	<!--sign up form-->
+	<h2>Yeni hesabınızı oluşturun!</h2>
+	<form id="frmKullaniciKayit" asp-antiforgery="true" >
+
+		<div asp-validation-summary="All"></div>
+
+		<input asp-for=Adi type="text" placeholder="İsim" />
+		<span asp-validation-for="Adi"></span>
+
+		<input asp-for=Soyadi type="text" placeholder="Soyisim" />
+		<span asp-validation-for="Soyadi"></span>
+
+		<input asp-for=Email type="email" placeholder="E-Posta" />
+		<span asp-validation-for="Email"></span>
+
+		<input asp-for="Sifre" type="password" placeholder="Şifre" />
+		<span asp-validation-for="Sifre"></span>
+
+		<input asp-for="SifreTekrar" type="password" placeholder="Şifre Tekrar" />
+		<span asp-validation-for="SifreTekrar"></span>
+
+		<select asp-for="SehirId"  asp-items="@Model.Sehirler"></select>
+		<span asp-validation-for="SehirId"></span>
+
+		<div id="errorpanel">
+
+
+		</div>
+
+		<button id="btnKayitOl" type="button" class="btn btn-default">Kayıt Ol</button>
+	</form>
+</div><!--/sign up form-->

@@ -1,0 +1,79 @@
+﻿<section id="form">
+    <!--form-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1">
+                @* login *@
+                @await Component.InvokeAsync("login")
+            </div>
+            <div class="col-sm-1">
+                <h2 class="or">VEYA</h2>
+            </div>
+            <div class="col-sm-4">
+                @* signup *@
+                @await Component.InvokeAsync("signup")
+            </div>
+        </div>
+    </div>
+</section><!--/form-->
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#btnKayitOl").click(function () {
+
+                var ali = $("#frmKullaniciKayit");
+                var token = $("[name='__RequestVerificationToken']").val();
+
+                if (ali.valid()) {
+
+                    $.ajax({
+                        url: "/Kullanici/Add",
+                        method: "post",
+                        dataType: "json",
+                        data: ali.serialize(),
+                        success: function (r) {
+
+                            if (r.result) {
+
+                                Swal.fire({
+                                    title: "İşlem Başarılı",
+                                    text: "Kayıt İşlemini Tamamlandı. Lütfen Mail Onayı İçin Emailinizi Kontrol Ediniz.",
+                                    icon: "success"
+                                });
+
+
+                            }
+                            else {
+                                //HATALARI DİV yerine ilgili validation for nesnelerinde göster...
+
+                                var errorlist = "<ul>"
+
+                                for (var i = 0; i < r.errors.length; i++) {
+
+                                    errorlist += "<li>" + r.errors[i] + " </li>"
+                                }
+
+                                errorlist += "</ul>";
+
+                                $("#errorpanel").html(errorlist);
+                            }
+
+                        },
+                        error: function () {
+
+
+                        }
+                    });
+
+
+                }
+
+
+
+
+            })
+        });
+
+
+    </script>
+}

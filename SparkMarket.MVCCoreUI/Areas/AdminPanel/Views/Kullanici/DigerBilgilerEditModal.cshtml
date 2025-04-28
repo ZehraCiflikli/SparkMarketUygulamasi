@@ -1,0 +1,62 @@
+﻿@model KullaniciDigerBilgilerVm
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Kullanici Bilgileri Güncelle</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <input type="hidden" asp-for="KullaniciId" value="@Model.KullaniciId" />
+            <div class="form-group">
+                <label asp-for="TckimlikNo">TC KimlikNo</label>
+                <input asp-for="TckimlikNo" type="text" value="@Model.TckimlikNo" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="CepTelefonu">Cep Telefonu</label>
+                <input asp-for="CepTelefonu" type="text" value="@Model.CepTelefonu" class="form-control" />
+            </div>
+            <div class="form-group">                
+                <label asp-for="KullaniciTipiId">KullaniciTipi</label>
+                <select asp-for="KullaniciTipiId" asp-items="@Model.KullaniciTipleri" class="form-control">
+                    <option disabled selected >Kullanici Tipi Seciniz</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="VergiNo">Vergi No</label>
+                <input type="text" asp-for="VergiNo" value="@Model.VergiNo" class="form-control" disabled />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="VergiDairesi">Vergi Dairesi</label>
+                <input type="text" asp-for="VergiDairesi" value="@Model.VergiDairesi" class="form-control" disabled />
+            </div>
+            <label for="adresler">Kullanici Adres</label>
+            <hr />
+            <div class="form-group">
+                <label asp-for="KullaniciAdresi.SehirId">Sehir</label>
+                <select asp-for="KullaniciAdresi.SehirId" asp-items="Model.Sehirler" class="form-control">
+                    <option disabled selected>Sehir Seciniz</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="KullaniciAdresi.SemtId">Semt</label>
+                <select asp-for="KullaniciAdresi.SemtId" asp-items="Model.Semtler" class="form-control">
+                    <option disabled selected>Semt Seciniz</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="KullaniciAdresi.Adres">Adres</label>
+                <textarea type="text" asp-for="KullaniciAdresi.Adres" class="form-control" rows="4" >@Model.KullaniciAdresi.Adres</textarea>
+            </div>
+
+        </div>
+        <div class="modal-footer justify-content-between">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+            <button type="button" class="btn btn-primary" id="btnDigerBilgiler">Kaydet</button>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->

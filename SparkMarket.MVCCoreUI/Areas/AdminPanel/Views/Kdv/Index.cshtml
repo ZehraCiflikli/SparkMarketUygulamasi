@@ -1,0 +1,494 @@
+﻿@using SparkMarket.Model.ViewModel.Areas.AdminPanel
+@section ContentHeader
+{
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalKdvEkle">
+        Kdv Ekle
+    </button>
+}
+
+@model KdvIndexViewModel
+
+<div class="col-12">
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">KDV Listesi</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <table id="tblKdvler" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Kdv Adı</th>
+                        <th>Kdv Orani</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+
+</div>
+
+
+
+@section Styles {
+
+    <link href="~/adminassets/plugins/bootstrap-switch/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" />
+
+    <style>
+        .select2-container .select2-selection--single {
+            height: 40px;
+        }
+    </style>
+
+}
+
+
+
+
+
+
+<form id="frmKdvEkle">
+    <div class="modal fade" id="modalKdvEkle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Kdv Ekleme Paneli</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Kdv Adı</label>
+                            <input type="text" class="form-control" asp-for=KdvAdi placeholder="Kdv Adı">
+                        </div>
+
+                    </div>
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Kdv Oranı</label>
+                            <input type="text" class="form-control" asp-for=KdvOrani placeholder="Kdv Oranı">
+                        </div>
+
+                    </div>
+                    <!-- /.card-body -->
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">VAZGEÇ</button>
+                    <button type="button" id="btnKdvEkle" class="btn btn-primary">KAYDET</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</form>
+
+
+
+
+
+
+<form id="frmKdvGuncelle">
+    <div class="modal fade" id="modalKdvGuncelle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Kdv Güncelleme Paneli</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="GId">
+
+                            <label>Kdv Adı</label>
+                            <input type="text" class="form-control" id="GKdvAdi" placeholder="Kdv Adı">
+
+                            <label>Kdv Oranı</label>
+                            <input type="text" class="form-control" id="GKdvOrani" placeholder="Kdv Oranı">
+                        </div>
+
+                    </div>
+                    <!-- /.card-body -->
+
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">VAZGEÇ</button>
+                    <button type="button" id="btnKdvGuncelle" class="btn btn-primary">GÜNCELLE</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</form>
+
+
+@section Scripts {
+        var table;
+    <script>
+        table = $("#tblKdvler").DataTable({
+            "dom": "Bfrtip",
+            "responsive": true,
+            "lengthChange": true,
+            "pageLength": 10,
+            "autoWidth": false,
+            "buttons": ["csv", "excel", "pdf", "print", "colvis"],
+            language: {
+                url: '/json/datatablestr.json',
+            },
+            ajax: { url: '/AdminPanel/Kdv/List', type: 'post' },
+            columns: [
+                { data: 'id', visible: false },
+                { data: 'kdvAdi' },
+                { data: 'kdvOrani' },
+                { data: 'aktif' },
+                { data: 'id' },
+                { data: 'id' },
+
+            ],
+
+
+            columnDefs: [
+
+
+                {
+                    targets: 3,
+                    render: function (data, type, row, meta) {
+
+                        var kdvid = row["id"];
+
+                        if (data)
+
+                            return '<input kdvid=' + kdvid + '  type= "checkbox" data-on-text="AKTİF" data-off-text="PASİF" name = "my-checkbox" checked data-bootstrap-switch data-off-color="danger" class="chkAktif" data-on-color="success" > ';
+
+
+                        else
+
+                            return '<input kdvid=' + kdvid + '  type= "checkbox" data-on-text="AKTİF" data-off-text="PASİF" name = "my-checkbox"  data-bootstrap-switch data-off-color="danger" class="chkAktif" data-on-color="success" > ';
+
+                    }
+                },
+
+                {
+                    targets: 4,
+                    render: function (data, type, row, meta) {
+
+                        return "<a class='btn btn-info btnDuzenle' kdvid=" + data + ">   <i class='fas fa-pencil-alt'></i>DÜZENLE</a > ";
+
+                    }
+                },
+
+                {
+                    targets: 5,
+                    render: function (data, type, row, meta) {
+
+                        return "<a class='btn btn-danger btnSil' kdvid=" + data + "><i class='fas fa-trash'></i> SİL</a > ";
+                    }
+                },
+
+            ],
+
+
+            initComplete: function (settings, json) {
+
+                // Datatable initilize olduğunda
+                $("input[data-bootstrap-switch]").each(function () {
+                    $(this).bootstrapSwitch();
+                })
+
+
+            },
+
+            drawCallback: function () {
+
+                // Arama Yapıldığında, Sayfalama Yapıldığında, Sıralama Yapıldığında Draw yapılıyor
+                $("input[data-bootstrap-switch]").each(function () {
+                    $(this).bootstrapSwitch();
+                })
+
+
+
+            }
+
+
+
+        }).buttons().container().appendTo('#tblKdvler_wrapper .col-md-6:eq(0)');
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        $("#btnKdvEkle").click(function () {
+
+            var k = {
+                KdvAdi: $("#KdvAdi").val(),
+                KdvOrani: $("#KdvOrani").val(),
+
+            };
+
+            $.ajax({
+                url: "/AdminPanel/Kdv/Add",
+                dataType: "json",
+                method: "post",
+                data: { k: k },
+                success: function (a) {
+                    if (a.result) {
+
+                        $("#tblKdvler").DataTable().ajax.reload();
+
+                        Swal.fire({
+                            title: "İşlem Başarılı",
+                            text: "KDV Başarıyla Eklendi.",
+                            icon: "success"
+                        });
+                        $("#modalKdvEkle").modal("hide");
+                    }
+
+                },
+                error: function () {
+
+                }
+
+            });
+
+        });
+
+        //////////////////////////////////////////////////////////////////////////////////////7
+
+
+        $(document).on('switchChange.bootstrapSwitch', '.chkAktif', function (event, state) {
+
+            var swal = Swal.fire({
+                title: "LÜTFEN BEKLEYİNİZ...",
+                html: "İşleminiz Yapılıyor",
+                timerProgressBar: true,
+                didOpen: () => {
+
+                    Swal.showLoading();
+
+                },
+            });
+
+            var id = $(this).attr('kdvid');
+            var aktifpasif = state;
+            $.ajax({
+                url: "/AdminPanel/Kdv/AktifPasif",
+                type: "post",
+                dataType: "json",
+                data: { id: id, aktif: aktifpasif },
+                success: function (r) {
+
+
+                    swal.close();
+                    if (r.result) {
+                        Swal.fire({
+                            title: "İŞLEM BAŞARILI",
+                            text: r.mesaj,
+                            icon: "success"
+                        });
+                    }
+                },
+                error: function () {
+
+                }
+            }
+            );
+
+
+        });
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        $(document).on('click', '.btnDuzenle', function () {
+            var swal = Swal.fire({
+                title: "LÜTFEN BEKLEYİNİZ...",
+                html: "İşleminiz Yapılıyor",
+                timerProgressBar: true,
+                didOpen: () => {
+
+                    Swal.showLoading();
+
+                },
+            });
+
+            var id = $(this).attr('kdvid');
+            $("#GId").val(id);
+
+            $.ajax({
+                url: "/AdminPanel/Kdv/GetKdv",
+                type: "post",
+                dataType: "json",
+                data: { id: id },
+                success: function (r) {
+
+                    if (r.result) {
+                        $("#GKdvAdi").val(r.model.kdvAdi);
+                        $("#GKdvOrani").val(r.model.kdvOrani);
+
+
+                        
+
+
+                        $("#modalKdvGuncelle").modal('show');
+                    }
+                    swal.close();
+
+
+                },
+                error: function () {
+
+                }
+            }
+            );
+
+
+        });
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        $(document).on('click', '#btnKdvGuncelle', function () {
+
+
+            var swal = Swal.fire({
+                title: "LÜTFEN BEKLEYİNİZ...",
+                html: "İşleminiz Yapılıyor",
+                timerProgressBar: true,
+                didOpen: () => {
+
+                    Swal.showLoading();
+
+                },
+            });
+
+            var formData = new FormData();
+
+
+
+            var KdvAdi = $("#GKdvAdi").val();
+             var KdvOrani = $("#GKdvOrani").val();
+            var Id = $("#GId").val();
+
+            formData.append("KdvAdi", KdvAdi)
+
+            formData.append("KdvOrani", KdvOrani)
+
+            formData.append("Id", Id)
+
+            $.ajax({
+                url: "/AdminPanel/Kdv/Update",
+                type: "post",
+                dataType: "json",
+                processData: false,
+                contentType: false,
+                data: formData,
+                success: function (r) {
+
+
+
+                    swal.close();
+                    if (r.result) {
+                        Swal.fire({
+                            title: "İŞLEM BAŞARILI",
+                            text: r.mesaj,
+                            icon: "success"
+                        });
+                    }
+
+                    $("#modalKdvGuncelle").modal("hide");
+
+                    $("#tblKdvler").DataTable().ajax.reload();
+
+
+                },
+               
+
+                error: function () {
+
+                }
+            }
+            );
+
+
+        });
+
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+        $(document).on('click', '.btnSil', function () {
+
+
+            var id = $(this).attr("kdvid");
+
+            Swal.fire({
+                title: "UYARI",
+                text: "KDV Silinecek Emin Misiniz?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "SİL!",
+                cancelButtonText: "VAZGEÇ!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+
+
+                    $.ajax({
+                        url: "/AdminPanel/Kdv/Delete",
+                        dataType: "json",
+                        method: "post",
+                        data: { id: id },
+                        success: function (r) {
+
+                            if (r.result) {
+                                Swal.fire({
+                                    title: "İşlem Başarılı",
+                                    text: "KDV Başarıyla Silindi.",
+                                    icon: "success"
+                                });
+
+                                $("#tblKdvler").DataTable().ajax.reload();
+
+                            }
+
+                        },
+                        error: function () {
+
+
+                        }
+
+
+                    });
+
+
+
+                }
+            });
+
+        });
+
+
+
+
+    </script>
+}

@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model HomeIndexViewModel
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Kategori Adı</th>
+                <th>Kategori Gorunum</th>
+                <th>Ust Kategori</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Data)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.KategoriAdi</td>
+                    <td>@item.UstKategoriGorunum</td>
+                    <td>@item.UstKategoriId</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <button id="btnGetir">GETİR</button>
+</div>
+
+<div>
+   <label>Kategori Adı</label>
+
+
+
+</div>
+
+
+
+
+@section Scripts {
+
+    <script>
+
+
+        // Ajax Post,Put,Delete Aynı şekilde
+        $("#btnGetir").click(function () {
+
+            $.ajax({
+                url: "http://localhost:5146/api/Kategori/",
+                headers: {
+                    username:"admin",
+                    password:"12345"
+                },
+                method:"get",
+                dataType:"json",
+                success: function (r) { 
+
+                    for (var i = 0; i<r.data.length ;i++) 
+                    {
+
+                        alert(r.data[i].kategoriAdi);
+
+                    }
+
+                  
+                },
+                Error:function()
+                {
+
+
+                }
+
+
+
+            });
+
+
+        });
+
+
+    </script>
+    
+}

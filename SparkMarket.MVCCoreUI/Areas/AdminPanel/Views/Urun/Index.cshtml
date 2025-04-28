@@ -1,0 +1,82 @@
+﻿@section ContentHeader
+{
+    <a href="/AdminPanel/Urun/Add" class="btn btn-default">
+        Ürün Ekle
+    </a>
+
+    <a href="/AdminPanel/Rapor/CreateRapor" class="btn btn-default">
+        Rapor Al
+    </a>
+}
+@model UrunIndexViewModel
+<div class="col-12">
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Ürün Listesi</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <table id="tblUrunler" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Ürün Adı</th>
+                        <th>Marka</th>
+                    @*     <th>Açıklama</th> *@
+                        <th>Resim</th>
+                        <th>Kategorisi</th>
+                    @*     <th>Birim</th> *@
+                        <th>Kdv Oranı</th>
+                        <th>Stok</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+
+</div>
+@section Styles {
+
+    <link href="~/adminassets/plugins/bootstrap-switch/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" />
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/adminassets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="~/adminassets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <style>
+        .select2-container .select2-selection--single {
+            height: 40px;
+        }
+    </style>
+}
+
+<div class="modal fade" id="modalCategoryImage">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="categoryname"></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <img id="imgcategory" src="" width="100%" />
+
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+@section Scripts {
+
+    <script src="/adminassets/plugins/select2/js/select2.full.min.js"></script>
+
+    <script src="~/adminassets/js/custom/urun.js"></script>
+
+}

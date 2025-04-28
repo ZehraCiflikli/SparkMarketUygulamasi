@@ -1,0 +1,107 @@
+﻿@model RaporIndexViewModel
+@section ContentHeader
+{
+
+
+
+}
+
+<table class="table table-hover">
+    <thead>
+
+        <tr>
+            <td>
+                ID
+            </td>
+            <td>
+                TalepTarihi
+
+            </td>
+            <td>
+                RaporTipi
+
+            </td>
+            <td>
+                Rapor İndir
+
+            </td>
+
+            <td>
+                Durum
+
+            </td>
+            <td>
+                Rapor Tarihi
+
+            </td>
+        </tr>
+
+
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.RaporListesi)
+        {
+
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.TalepTarih
+
+                </td>
+                <td>
+                    @(item.RaporTipId == 0 ? "PDF" : "EXCEL")
+
+                </td>
+                <td>
+
+                    @if (@item.Durum == 1)
+                    {
+                        <a href="@item.RaporUrl">@item.RaporUrl</a>
+
+                    }
+
+
+                </td>
+
+                <td>
+
+                    @if (@item.Durum == 0)
+                    {
+                        <span> Hazırlanıyor..</span>
+
+                    }
+                    else
+                    {
+                        <span> Hazır..</span>
+
+
+                    }
+
+
+                </td>
+                <td>
+                    @if (@item.Durum == 0)
+                    {
+                        <span> </span>
+
+                    }
+                    else
+                    {
+                        <span> @item.RaporTarih</span>
+
+
+                    }
+
+                </td>
+            </tr>
+
+
+        }
+
+
+
+    </tbody>
+</table>

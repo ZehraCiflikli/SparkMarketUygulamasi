@@ -1,0 +1,463 @@
+﻿@model KullaniciVm
+@section ContentHeader
+{
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#addModal">
+        Kullanıcı Ekle
+    </button>
+}
+
+@await Component.InvokeAsync("Kullanici")
+<!--RolModal-->
+<form id="rolForm">
+    <div class="modal fade" id="rolModal">
+    </div>
+</form>
+<!-- /.modal -->
+<!--DigerBilgilerModal-->
+<form id="digerBilgilerForm">
+    <div class="modal fade" id="digerBilgilerModal">
+    </div>
+</form>
+<!-- /.modal -->
+<!--DigerBilgilerEditModal-->
+<form id="editBilgilerForm">
+    <div class="modal fade" id="editBilgilerModal">
+    </div>
+</form>
+<!-- /.modal -->
+<!--UpdateModal-->
+<form id="updateForm">
+    <div class="modal fade" id="updateModal">
+    </div>
+</form>
+<!-- /.modal -->
+<!--DeleteModal-->
+<form id="deleteForm">
+    <div class="modal fade" id="deleteModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Kullanici Sil</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input name="id" type="hidden" id="deleteInput" value="" />
+                    <p>Bu Kullaniciyi silmek istediğinize emin misiniz?Bu kullanıcıya ait bütün bağlantılarda silinecektir.</p>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-primary" id="btnDelete">Sil</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</form>
+<!-- /.modal -->
+<!--AddModal-->
+<form id="addForm">
+    <div class="modal fade" id="addModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Kullanici Ekle</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label asp-for="Adi">Kullanıcı Adı</label>
+                        <input asp-for="Adi" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Soyadi">Kullanıcı Soyadı</label>
+                        <input asp-for="Soyadi" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email">Email</label>
+                        <input asp-for="Email" type="email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TckimlikNo">TC KimlikNo</label>
+                        <input asp-for="TckimlikNo" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CepTelefonu">Cep Telefonu</label>
+                        <input asp-for="CepTelefonu" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Sifre">Sifre</label>
+                        <input asp-for="Sifre" type="password" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="KullaniciTipi">Kullanici Tipi</label>
+                        <select asp-for="KullaniciTipi" asp-items="@Model.KullaniciTipleri" class="form-control">
+                            <option disabled selected>Kullanici Tipi Seciniz</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-primary" id="btnAdd">Ekle</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</form>
+<!-- /.modal -->
+@section Scripts {
+    <script src="~/adminassets/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    @* <script src="~/adminassets/plugins/select2/js/select2.multi-checkboxes.js"></script> *@
+
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "dom": "Bfrtip",
+                "responsive": true,
+                "lengthChange": true,
+                "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+                "language": {
+                    url: '/json/datatablestr.json'
+                },
+                initComplete: function (settings, json) {
+                    $("input[data-bootstrap-switch]").each(function () {
+                        $(this).bootstrapSwitch('state', $(this).prop('checked'));
+
+                    });
+                },
+                drawCallback: function () {
+                    $("input[data-bootstrap-switch]").each(function () {
+                        $(this).bootstrapSwitch('state', $(this).prop('checked'));
+
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+        //add
+        $(document).on("click", "#btnAdd", function () {
+            var form = $("#addForm");
+            $.ajax({
+                type: "post",
+                url: "/AdminPanel/Kullanici/Add",
+                data: form.serialize(),
+                success: function (r) {
+                    if (r.result) {
+
+                        Swal.fire({
+                            title: "İslem Basarılı!",
+                            text: r.mesaj,
+                            icon: "success",
+                        }).then(function () {
+                            sessionStorage.setItem("addModal", "true");
+                            location.reload();
+                        });
+                    }
+                    else {
+
+                        Swal.fire({
+                            icon: "error",
+                            title: "İslem Basarısız!",
+                            text: r.mesaj,
+                        });
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+
+        });
+
+        $(document).ready(function () {
+            // storage lar
+            if (sessionStorage.getItem("addModal") == "true") {
+                $("#addModal").modal("show");
+                sessionStorage.removeItem("addModal"); // Modal açıldıktan sonra değeri kaldırır
+            }
+        });
+
+        //delete
+        function DeleteModal(id) {
+            $("#deleteInput").val(id);
+            $("#deleteModal").modal("show");
+        };
+        $(document).on("click", "#btnDelete", function () {
+            var id = $("#deleteInput").val();
+            $.ajax({
+                type: "post",
+                url: "/AdminPanel/Kullanici/Delete",
+                data: { id: id },
+                success: function (r) {
+                    if (r.result) {
+
+                        Swal.fire({
+                            title: "İslem Basarılı!",
+                            text: r.mesaj,
+                            icon: "success",
+                        }).then(function () {
+                            location.reload();
+                        });
+                    }
+                    else {
+
+                        Swal.fire({
+                            icon: "error",
+                            title: "İslem Basarısız!",
+                            text: r.mesaj,
+                        });
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+
+        });
+
+        //roller
+        function RolModal(id) {
+            $.ajax({
+                type: "Post",
+                url: "/AdminPanel/Kullanici/RolModal",
+                data: { id: id },
+                success: function (data) {
+
+                    $("#rolModal").html(data);
+                    $("#rolModal").modal("show");
+                    $(".js-select2").select2({
+                        closeOnSelect: false,
+                        placeholder: "Rol seciniz",
+                        allowHtml: true,
+                        allowClear: true,
+                        tags: true, // создает новые опции на лету
+                    });
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+
+
+
+            })
+
+        }
+
+        //change aktif
+        $('input[name="my-checkbox"]').on('switchChange.bootstrapSwitch', function (event, state) {
+
+            var id = $(this).val();
+
+            $.ajax({
+                type: "POST",
+                url: "/AdminPanel/Kullanici/ChangeAktif",
+                data: { id: id, deger: state },
+                success: function (r) {
+                    if (r.result) {
+
+                        Swal.fire({
+                            title: "İslem Basarılı!",
+                            text: r.mesaj,
+                            icon: "success",
+                        });
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+
+        });
+
+        //diger bilgiler
+        function DigerBilgiler(id) {
+            $.ajax({
+                type: "POST",
+                url: "/AdminPanel/Kullanici/DigerBilgiler",
+                data: { id: id },
+                success: function (data) {
+                    $("#digerBilgilerModal").html(data);
+                    $("#digerBilgilerModal").modal("show");
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        }
+
+        function EditDigerBilgiler(id) {
+            $.ajax({
+                type: "POST",
+                url: "/AdminPanel/Kullanici/DigerBilgilerEditModal",
+                data: { id: id },
+                success: function (data) {
+
+                    $("#digerBilgilerModal").modal("hide");
+                    $("#editBilgilerModal").html(data);
+                    $("#editBilgilerModal").modal("show");
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        }
+        $(document).on("click", "#btnDigerBilgiler", function () {
+            var form = $("#editBilgilerForm");
+            $.ajax({
+                type: "post",
+                url: "/AdminPanel/Kullanici/UpdateDigerBilgiler",
+                data: form.serialize(),
+                success: function (r) {
+                    if (r.result) {
+
+                        Swal.fire({
+                            title: "İslem Basarılı!",
+                            text: r.mesaj,
+                            icon: "success",
+                        }).then(function () {
+
+                            location.reload();
+                        });
+                    }
+                    else {
+
+                        Swal.fire({
+                            icon: "error",
+                            title: "İslem Basarısız!",
+                            text: r.mesaj,
+                        });
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        })
+        //update
+        $(document).on("click", "#btnUpdate", function () {
+            var form = $("#updateForm");
+            $.ajax({
+                type: "post",
+                url: "/AdminPanel/Kullanici/Update",
+                data: form.serialize(),
+                success: function (r) {
+                    if (r.result) {
+
+                        Swal.fire({
+                            title: "İslem Basarılı!",
+                            text: r.mesaj,
+                            icon: "success",
+                        }).then(function () {
+                            sessionStorage.setItem("id", r.id);
+                            location.reload();
+                        });
+                    }
+                    else {
+
+                        Swal.fire({
+                            icon: "error",
+                            title: "İslem Basarısız!",
+                            text: r.mesaj,
+                        });
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+
+        });
+        function UpdateModal(id) {
+            $.ajax({
+                type: "post",
+                url: "/AdminPanel/Kullanici/UpdateModal",
+                data: { id: id },
+                success: function (data) {
+
+                    $("#updateModal").html(data);
+                    $("#updateModal").modal("show");
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        };
+
+        $(document).on("click", "#btnRol", function () {
+            var form = $("#rolForm");
+            $.ajax({
+                type: "post",
+                url: "/AdminPanel/Kullanici/RolGuncelle",
+                data: form.serialize(),
+                success: function (r) {
+                    if (r.result) {
+
+                        Swal.fire({
+                            title: "İslem Basarılı!",
+                            text: r.mesaj,
+                            icon: "success",
+                        }).then(function () {
+                            location.reload();
+                        });
+                    }
+                    else {
+
+                        Swal.fire({
+                            icon: "error",
+                            title: "İslem Basarısız!",
+                            text: r.mesaj,
+                        });
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+
+        });
+
+        $("#editBilgilerModal").on("show.bs.modal", function () {
+            var deger = $("#KullaniciTipiId").find('option:selected').html();
+            if (deger == 'Kurumsal') {
+                $("#VergiNo").prop("disabled", false);
+                $("#VergiDairesi").prop("disabled", false);
+            }
+            else {
+                $("#VergiNo").prop("disabled", true);
+                $("#VergiDairesi").attr("disabled", true);
+            }
+        });
+
+        $(document).on("change", "#KullaniciTipiId", function () {
+            var deger = $("#KullaniciTipiId").find('option:selected').html();
+            if (deger == 'Kurumsal') {
+                $("#VergiNo").prop("disabled", false);
+                $("#VergiDairesi").prop("disabled", false);
+            }
+            else {
+                $("#VergiNo").prop("disabled", true);
+                $("#VergiDairesi").prop("disabled", true);
+            }
+        });
+
+        $('#digerBilgilerModal').on('hidden.bs.modal', function (e) {
+            $('body').addClass('modal-open');
+        });
+    </script>
+}
+@section Styles {
+
+    <link href="~/adminassets/plugins/bootstrap-switch/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" />
+    <link href="~/adminassets/css/kullanici.css" rel="stylesheet" />
+
+
+}

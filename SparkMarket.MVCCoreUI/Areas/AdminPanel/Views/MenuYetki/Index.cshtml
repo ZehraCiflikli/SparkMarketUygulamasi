@@ -1,0 +1,145 @@
+﻿@model MenuYetkiViewModel
+
+
+@section ContentHeader
+{
+
+}
+
+<div class="col-12">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Menü Yetki Listesi</h3>
+        </div>
+        <div class="card-body">
+            <form id="FormMenuYetki">
+                <div class="form-group">
+                    <label>Menü</label>
+                    <select asp-for="MenuId" asp-items="@Model.MenuList" class="form-control">
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Rol</label>
+                    <select asp-for="RolId" asp-items="@Model.RolList" class="form-control">
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+                    <label>Select Yetki</label>
+                    <input type="checkbox" class="form-check" asp-for="SelectYetki" />
+                </div>
+                <div class="form-group">
+                    <label>Insert Yetki</label>
+                    <input type="checkbox" class="form-check" asp-for="InsertYetki" />
+                </div>
+
+                <div class="form-group">
+                    <label>Update Yetki</label>
+                    <input type="checkbox" class="form-check" asp-for="UpdateYetki" />
+                </div>
+
+                <div class="form-group">
+                    <label>Delete Yetki</label>
+                    <input type="checkbox" class="form-check" asp-for="DeleteYetki" />
+                </div>
+                <button type="button" id="btnKaydet" class="btn btn-primary">Kaydet</button>
+            </form>
+        </div>
+        <!-- /.card-body -->
+    </div>
+</div>
+
+
+<div class="card-body">
+    <h4>Mevcut Menü Yetkileri</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Menü</th>
+                <th>Rol</th>
+                <th>Select Yetki</th>
+                <th>Insert Yetki</th>
+                <th>Update Yetki</th>
+                <th>Delete Yetki</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.MenuYetkiler)
+            {
+                <tr>
+                    <td>@item.Menu?.Baslik</td>
+                    <td>@item.Rol?.RolAdi</td>
+                    <td>@((bool)item.SelectYetki ? "Evet" : "Hayır")</td>
+                    <td>@((bool)item.InsertYetki ? "Evet" : "Hayır")</td>
+                    <td>@((bool)item.UpdateYetki ? "Evet" : "Hayır")</td>
+                    <td>@((bool)item.DeleteYetki ? "Evet" : "Hayır")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#MenuId, #RolId').change(function () {
+                var menuId = $('#MenuId').val();
+                var rolId = $('#RolId').val();
+
+                if (menuId && rolId) {
+                    $.ajax({
+                        url: '/AdminPanel/MenuYetki/GetMenuYetki',
+                        type: 'POST',
+                        data: { menuId: menuId, rolId: rolId },
+                        success: function (response) {
+                            $('#SelectYetki').attr('checked', response.model.selectYetki);
+                            $('#InsertYetki').attr('checked', response.model.insertYetki);
+                            $('#UpdateYetki').attr('checked', response.model.updateYetki);
+                            $('#DeleteYetki').attr('checked', response.model.deleteYetki);
+                        },
+                        error: function (err) {
+                            console.error(err)
+                        },
+                    });
+                }
+            });
+
+
+
+            $("#btnKaydet").click(function () {
+                var form = $("#FormMenuYetki");
+
+                $.ajax({
+                    url: '/AdminPanel/MenuYetki/Save',
+                    type: 'POST',
+                    data: form.serialize(),
+                    success: function (response) {
+
+
+                        window.location.reload();
+
+
+                        // Swal.fire({
+                        //     title: "BAŞARILI",
+                        //     text: response.mesaj,
+                        //     icon: "success"
+                        // });
+                        // $('#SelectYetki').attr('checked', response.model.selectYetki);
+                        // $('#InsertYetki').attr('checked', response.model.insertYetki);
+                        // $('#UpdateYetki').attr('checked', response.model.updateYetki);
+                        // $('#DeleteYetki').attr('checked', response.model.deleteYetki);
+                    },
+                    error: function (err) {
+                        console.error(err)
+                    },
+                });
+
+
+            });
+
+
+        });
+    </script>
+}

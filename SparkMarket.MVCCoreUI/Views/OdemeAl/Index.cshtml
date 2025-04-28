@@ -1,0 +1,676 @@
+﻿@model OdemeModel
+
+
+
+
+<div class="payment-container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="payment-card">
+                <div class="payment-header d-flex align-items-center">
+                    <img src="https://www.iyzico.com/assets/images/content/logo/iyzico-logo-white.svg" alt="iyzico" class="payment-logo">
+                    <h3>Güvenli Ödeme</h3>
+                </div>
+                
+                <div class="payment-body">
+                    @using (Html.BeginForm("OdemeYap", "Odeme", FormMethod.Post, new { @class = "payment-form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="credit-card-box">
+                                    <div class="credit-card">
+                                        <img src="https://www.iyzico.com/assets/images/content/card-brands/visa.svg" alt="card" class="card-brand">
+                                        <div class="card-number">•••• •••• •••• ••••</div>
+                                        <div class="card-holder">KART SAHİBİ</div>
+                                        <div class="card-expiry">AY/YIL</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-container">
+                                    <h4 class="section-title">Kart Bilgileri</h4>
+                                    
+                                    <div class="form-group mb-3">
+                                        @Html.LabelFor(m => m.KartSahibi, "Kart Üzerindeki İsim")
+                                        @Html.TextBoxFor(m => m.KartSahibi, new { @class = "form-control", placeholder = "Kart sahibinin adı soyadı" })
+                                        @Html.ValidationMessageFor(m => m.KartSahibi, "", new { @class = "text-danger" })
+                                    </div>
+                                    
+                                    <div class="form-group mb-3">
+                                        @Html.LabelFor(m => m.KartNumarasi, "Kart Numarası")
+                                        @Html.TextBoxFor(m => m.KartNumarasi, new { @class = "form-control", placeholder = "1234 5678 9012 3456" })
+                                        @Html.ValidationMessageFor(m => m.KartNumarasi, "", new { @class = "text-danger" })
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="form-group mb-3">
+                                                <label>Son Kullanma Tarihi</label>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        @Html.TextBoxFor(m => m.SonKullanmaAy, new { @class = "form-control", placeholder = "Ay (MM)" })
+                                                    </div>
+                                                    <div class="col-6">
+                                                        @Html.TextBoxFor(m => m.SonKullanmaYil, new { @class = "form-control", placeholder = "Yıl (YY)" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                @Html.LabelFor(m => m.Cvc, "CVV")
+                                                @Html.TextBoxFor(m => m.Cvc, new { @class = "form-control", placeholder = "123" })
+                                                @Html.ValidationMessageFor(m => m.Cvc, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <img src="https://www.iyzico.com/assets/images/content/card-brands/visa.svg" alt="visa" class="card-img">
+                                        <img src="https://www.iyzico.com/assets/images/content/card-brands/mastercard.svg" alt="mastercard" class="card-img">
+                                        <img src="https://www.iyzico.com/assets/images/content/card-brands/amex.svg" alt="amex" class="card-img">
+                                        <img src="https://www.iyzico.com/assets/images/content/card-brands/troy.svg" alt="troy" class="card-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card-container">
+                                    <h4 class="section-title">Kişisel Bilgiler</h4>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                @Html.LabelFor(m => m.Ad, "Ad")
+                                                @Html.TextBoxFor(m => m.Ad, new { @class = "form-control" })
+                                                @Html.ValidationMessageFor(m => m.Ad, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                @Html.LabelFor(m => m.Soyad, "Soyad")
+                                                @Html.TextBoxFor(m => m.Soyad, new { @class = "form-control" })
+                                                @Html.ValidationMessageFor(m => m.Soyad, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group mb-3">
+                                        @Html.LabelFor(m => m.Email, "E-posta Adresi")
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+                                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                    
+                                    <div class="form-group mb-3">
+                                        @Html.LabelFor(m => m.Telefon, "Telefon")
+                                        @Html.TextBoxFor(m => m.Telefon, new { @class = "form-control", placeholder = "5XX XXX XX XX" })
+                                        @Html.ValidationMessageFor(m => m.Telefon, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card-container">
+                                    <h4 class="section-title">Adres ve Ödeme Bilgileri</h4>
+                                    
+                                    <div class="form-group mb-3">
+                                        @Html.LabelFor(m => m.Adres, "Adres")
+                                        @Html.TextAreaFor(m => m.Adres, new { @class = "form-control", rows = 3 })
+                                        @Html.ValidationMessageFor(m => m.Adres, "", new { @class = "text-danger" })
+                                    </div>
+                                    
+                                    <div class="form-group mb-3">
+                                        @Html.LabelFor(m => m.Sehir, "Şehir")
+                                        @Html.TextBoxFor(m => m.Sehir, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.Sehir, "", new { @class = "text-danger" })
+                                    </div>
+                                    
+                                    <div class="form-group mb-3">
+                                        @Html.LabelFor(m => m.Tutar, "Ödeme Tutarı")
+                                        <div class="input-group">
+                                            @Html.TextBoxFor(m => m.Tutar, new { @class = "form-control", type = "number", step = "0.01", @readonly = "readonly" })
+                                            <span class="input-group-text">TL</span>
+                                        </div>
+                                        @Html.ValidationMessageFor(m => m.Tutar, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn payment-button w-100">
+                                    <i class="fas fa-lock me-2"></i> Güvenli Şekilde Öde
+                                </button>
+                                
+                                <div class="secure-badge">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>iyzico güvenli ödeme altyapısı ile işleminiz korunmaktadır</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    // Kart numarası formatlaması
+    $('#KartNumarasi').on('keyup', function() {
+        let value = $(this).val();
+        
+        // Sadece rakamları alıyoruz
+        value = value.replace(/\D/g, '');
+        
+        // 16 rakamdan fazlasını kesiyoruz
+        if (value.length > 16) {
+            value = value.substring(0, 16);
+        }
+        
+        // Her 4 rakamdan sonra boşluk ekliyoruz
+        let formattedValue = '';
+        for (let i = 0; i < value.length; i++) {
+            if (i > 0 && i % 4 === 0) {
+                formattedValue += ' ';
+            }
+            formattedValue += value[i];
+        }
+        
+        $(this).val(formattedValue);
+        
+        // Kart numarasını görsel üzerinde güncelliyoruz
+        let cardNumber = formattedValue || '•••• •••• •••• ••••';
+        if (formattedValue) {
+            // İlk 4 ve son 4 hane dışındakileri gizliyoruz
+            if (value.length > 8) {
+                let firstGroup = formattedValue.substring(0, 4);
+                let lastGroup = formattedValue.substring(formattedValue.length - 5);
+                cardNumber = firstGroup + ' •••• ••••' + lastGroup;
+            }
+        }
+        $('.card-number').text(cardNumber);
+        
+        // Kart tipini tespit ediyoruz
+        detectCardType(value);
+    });
+    
+    // Kart sahibi adı formatlaması
+    $('#KartSahibi').on('keyup', function() {
+        let value = $(this).val();
+        
+        // Kart sahibi adını görsel üzerinde güncelliyoruz
+        $('.card-holder').text(value.toUpperCase() || 'KART SAHİBİ');
+    });
+    
+    // Son kullanma tarihi formatlaması
+    $('#SonKullanmaAy, #SonKullanmaYil').on('keyup', function() {
+        let ay = $('#SonKullanmaAy').val();
+        let yil = $('#SonKullanmaYil').val();
+        
+        // Ay değerini kontrol ediyoruz
+        if (ay) {
+            // Sadece rakamları alıyoruz
+            ay = ay.replace(/\D/g, '');
+            
+            // 2 rakamdan fazlasını kesiyoruz
+            if (ay.length > 2) {
+                ay = ay.substring(0, 2);
+            }
+            
+            // 12'den büyük olamaz
+            if (parseInt(ay) > 12) {
+                ay = '12';
+            }
+            
+            // 01-09 için başına 0 ekliyoruz
+            if (ay.length === 1 && parseInt(ay) > 0) {
+                ay = '0' + ay;
+            }
+            
+            $('#SonKullanmaAy').val(ay);
+        }
+        
+        // Yıl değerini kontrol ediyoruz
+        if (yil) {
+            // Sadece rakamları alıyoruz
+            yil = yil.replace(/\D/g, '');
+            
+            // 2 rakamdan fazlasını kesiyoruz
+            if (yil.length > 2) {
+                yil = yil.substring(0, 2);
+            }
+            
+            $('#SonKullanmaYil').val(yil);
+        }
+        
+        // Son kullanma tarihini görsel üzerinde güncelliyoruz
+        let expiryText = 'AY/YIL';
+        if (ay || yil) {
+            expiryText = (ay || 'MM') + '/' + (yil || 'YY');
+        }
+        $('.card-expiry').text(expiryText);
+    });
+    
+    // CVV formatlaması
+    $('#Cvc').on('keyup', function() {
+        let value = $(this).val();
+        
+        // Sadece rakamları alıyoruz
+        value = value.replace(/\D/g, '');
+        
+        // 3 rakamdan fazlasını kesiyoruz (Amex için 4 rakam olabilir)
+        if (value.length > 4) {
+            value = value.substring(0, 4);
+        }
+        
+        $(this).val(value);
+        
+        // CVV girildiğinde kart flip animasyonu
+        if (value.length > 0) {
+            $('.credit-card').addClass('flip');
+        } else {
+            $('.credit-card').removeClass('flip');
+        }
+    });
+    
+    // CVV alanına focus olduğunda kart flip animasyonu
+    $('#Cvc').on('focus', function() {
+        $('.credit-card').addClass('flip');
+    }).on('blur', function() {
+        if (!$(this).val()) {
+            $('.credit-card').removeClass('flip');
+        }
+    });
+    
+    // Telefon numarası formatlaması
+    $('#Telefon').on('keyup', function() {
+        let value = $(this).val();
+        
+        // Sadece rakamları alıyoruz
+        value = value.replace(/\D/g, '');
+        
+        // 10 rakamdan fazlasını kesiyoruz
+        if (value.length > 10) {
+            value = value.substring(0, 10);
+        }
+        
+        // Türkiye formatında: 5XX XXX XX XX
+        let formattedValue = '';
+        for (let i = 0; i < value.length; i++) {
+            if (i === 3 || i === 6 || i === 8) {
+                formattedValue += ' ';
+            }
+            formattedValue += value[i];
+        }
+        
+        $(this).val(formattedValue);
+    });
+    
+    // Kart tipini tespit eden fonksiyon
+    function detectCardType(number) {
+        // Kart numarasındaki boşlukları kaldırıyoruz
+        number = number.replace(/\s/g, '');
+        
+        // Visa
+        if (number.match(/^4/)) {
+            changeCardBrand('visa');
+            return 'visa';
+        }
+        
+        // Mastercard
+        if (number.match(/^(5[1-5]|2(2(2[1-9]|[3-9])|[3-6]|7([0-1]|20)))/)) {
+            changeCardBrand('mastercard');
+            return 'mastercard';
+        }
+        
+        // Amex
+        if (number.match(/^3[47]/)) {
+            changeCardBrand('amex');
+            return 'amex';
+        }
+        
+        // Troy (Türkiye'ye özel)
+        if (number.match(/^9792/)) {
+            changeCardBrand('troy');
+            return 'troy';
+        }
+        
+        // Tanımlanamadı, varsayılan olarak Visa gösteriyoruz
+        changeCardBrand('visa');
+        return 'unknown';
+    }
+    
+    // Kart markasını değiştiren fonksiyon
+    function changeCardBrand(brand) {
+        // Kart rengini ve logo görselini değiştiriyoruz
+        switch(brand) {
+            case 'visa':
+                $('.credit-card').css('background', 'linear-gradient(135deg, #364156 0%, #011638 100%)');
+                $('.card-brand').attr('src', 'https://www.iyzico.com/assets/images/content/card-brands/visa.svg');
+                break;
+            case 'mastercard':
+                $('.credit-card').css('background', 'linear-gradient(135deg, #1A1A1A 0%, #CB2026 100%)');
+                $('.card-brand').attr('src', 'https://www.iyzico.com/assets/images/content/card-brands/mastercard.svg');
+                break;
+            case 'amex':
+                $('.credit-card').css('background', 'linear-gradient(135deg, #0F6AA9 0%, #00ACEC 100%)');
+                $('.card-brand').attr('src', 'https://www.iyzico.com/assets/images/content/card-brands/amex.svg');
+                break;
+            case 'troy':
+                $('.credit-card').css('background', 'linear-gradient(135deg, #143b88 0%, #00b3c7 100%)');
+                $('.card-brand').attr('src', 'https://www.iyzico.com/assets/images/content/card-brands/troy.svg');
+                break;
+        }
+    }
+    
+    // Form gönderildiğinde doğrulama
+    $('.payment-form').on('submit', function(e) {
+        let isValid = true;
+        
+        // Kart bilgilerini doğruluyoruz
+        const kartSahibi = $('#KartSahibi').val().trim();
+        const kartNumarasi = $('#KartNumarasi').val().replace(/\s/g, '');
+        const sonKullanmaAy = $('#SonKullanmaAy').val();
+        const sonKullanmaYil = $('#SonKullanmaYil').val();
+        const cvc = $('#Cvc').val();
+        
+        // Kişisel bilgileri doğruluyoruz
+        const ad = $('#Ad').val().trim();
+        const soyad = $('#Soyad').val().trim();
+        const email = $('#Email').val().trim();
+        const telefon = $('#Telefon').val().trim();
+        const adres = $('#Adres').val().trim();
+        const sehir = $('#Sehir').val().trim();
+        
+        // Kart sahibi adı kontrolü
+        if (!kartSahibi) {
+            showError($('#KartSahibi'), 'Kart sahibi adı gereklidir');
+            isValid = false;
+        } else {
+            hideError($('#KartSahibi'));
+        }
+        
+        // Kart numarası kontrolü (16 haneli olmalı)
+        if (!kartNumarasi || kartNumarasi.length < 16) {
+            showError($('#KartNumarasi'), 'Geçerli bir kart numarası giriniz');
+            isValid = false;
+        } else {
+            hideError($('#KartNumarasi'));
+        }
+        
+        // Son kullanma tarihi kontrolü
+        if (!sonKullanmaAy || !sonKullanmaYil) {
+            showError($('#SonKullanmaAy'), 'Son kullanma tarihi gereklidir');
+            isValid = false;
+        } else {
+            hideError($('#SonKullanmaAy'));
+        }
+        
+        // CVV kontrolü
+        if (!cvc || cvc.length < 3) {
+            showError($('#Cvc'), 'Geçerli bir güvenlik kodu giriniz');
+            isValid = false;
+        } else {
+            hideError($('#Cvc'));
+        }
+        
+        // Temel bilgilerin doğrulanması
+        if (!ad) {
+            showError($('#Ad'), 'Ad alanı gereklidir');
+            isValid = false;
+        } else {
+            hideError($('#Ad'));
+        }
+        
+        if (!soyad) {
+            showError($('#Soyad'), 'Soyad alanı gereklidir');
+            isValid = false;
+        } else {
+            hideError($('#Soyad'));
+        }
+        
+  
+        
+        // Telefon doğrulaması
+        if (!telefon || telefon.replace(/\s/g, '').length < 10) {
+            showError($('#Telefon'), 'Geçerli bir telefon numarası giriniz');
+            isValid = false;
+        } else {
+            hideError($('#Telefon'));
+        }
+        
+        // Adres doğrulaması
+        if (!adres) {
+            showError($('#Adres'), 'Adres alanı gereklidir');
+            isValid = false;
+        } else {
+            hideError($('#Adres'));
+        }
+        
+        // Şehir doğrulaması
+        if (!sehir) {
+            showError($('#Sehir'), 'Şehir alanı gereklidir');
+            isValid = false;
+        } else {
+            hideError($('#Sehir'));
+        }
+        
+        // Form geçerli değilse gönderimi engelliyoruz
+        if (!isValid) {
+            e.preventDefault();
+            
+            // Hata bildirimi gösteriyoruz
+            const alertHtml = '<div class="alert alert-danger mt-3">' +
+                              '<i class="fas fa-exclamation-triangle me-2"></i>' +
+                              'Lütfen formdaki hataları düzeltin ve tekrar deneyin.' +
+                              '</div>';
+            
+            // Eğer zaten uyarı gösterilmemişse ekliyoruz
+            if ($('.alert-danger').length === 0) {
+                $('.payment-form').prepend(alertHtml);
+                
+                // Uyarıyı 3 saniye sonra gizliyoruz
+                setTimeout(function() {
+                    $('.alert-danger').fadeOut(300, function() {
+                        $(this).remove();
+                    });
+                }, 3000);
+            }
+            
+            // Sayfayı ilk hataya kaydırıyoruz
+            $('html, body').animate({
+                scrollTop: $('.payment-form .is-invalid:first').offset().top - 100
+            }, 500);
+        } else {
+            // Form gönderilirken yükleniyor animasyonu gösteriyoruz
+            $('button[type="submit"]').prop('disabled', true)
+                .html('<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> İşleminiz gerçekleştiriliyor...');
+        }
+    });
+    
+    // Hata gösterme fonksiyonu
+    function showError(element, message) {
+        element.addClass('is-invalid');
+        
+        // Eğer hata mesajı elemanı yoksa oluşturuyoruz
+        if (element.next('.invalid-feedback').length === 0) {
+            element.after('<div class="invalid-feedback">' + message + '</div>');
+        } else {
+            element.next('.invalid-feedback').text(message);
+        }
+    }
+    
+    // Hata gizleme fonksiyonu
+    function hideError(element) {
+        element.removeClass('is-invalid');
+    }
+
+    </script>
+}
+
+    @section Styles{
+
+        <style>
+    .payment-container {
+        max-width: 900px;
+        margin: 30px auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .payment-card {
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border: none;
+        overflow: hidden;
+    }
+    
+    .payment-header {
+        background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+        padding: 20px;
+        color: white;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    
+    .payment-header h3 {
+        margin: 0;
+        font-weight: 600;
+    }
+    
+    .payment-logo {
+        height: 40px;
+        margin-right: 15px;
+    }
+    
+    .payment-body {
+        padding: 30px;
+        background-color: #f8f9fa;
+    }
+    
+    .section-title {
+        color: #3a3a3a;
+        font-weight: 500;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eaeaea;
+    }
+    
+    .form-control {
+        border-radius: 8px;
+        padding: 12px;
+        border: 1px solid #ced4da;
+        background-color: white;
+        transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    
+    .form-control:focus {
+        border-color: #6366F1;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+    }
+    
+    .form-group label {
+        font-weight: 500;
+        margin-bottom: 8px;
+        color: #495057;
+    }
+    
+    .card-img {
+        height: 35px;
+        margin-right: 10px;
+        opacity: 0.6;
+    }
+    
+    .card-container {
+        background-color: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        margin-bottom: 25px;
+    }
+    
+    .payment-button {
+        padding: 14px;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        background: linear-gradient(135deg, #20BF55 0%, #01BAEF 100%);
+        border: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+    }
+    
+    .payment-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+    
+    .secure-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        color: #6b7280;
+        font-size: 14px;
+    }
+    
+    .secure-badge i {
+        margin-right: 5px;
+        color: #22c55e;
+    }
+    
+    .credit-card-box {
+        perspective: 1000px;
+        margin-bottom: 30px;
+    }
+    
+    .credit-card {
+        background: linear-gradient(135deg, #364156 0%, #011638 100%);
+        color: white;
+        border-radius: 15px;
+        height: 200px;
+        padding: 25px;
+        position: relative;
+        box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    
+    .card-number {
+        font-size: 22px;
+        letter-spacing: 2px;
+        margin-top: 40px;
+    }
+    
+    .card-holder {
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    
+    .card-expiry {
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
+        font-size: 14px;
+    }
+    
+    .card-brand {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        height: 50px;
+        opacity: 0.8;
+    }
+</style>
+
+    }

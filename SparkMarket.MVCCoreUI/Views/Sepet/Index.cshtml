@@ -1,0 +1,171 @@
+﻿<div class="modal fade" tabindex="-1" role="dialog" id="resimmodal">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+            </div>
+            <div class="modal-body">
+
+                <img id="UrunResim" height="400" src="" />
+
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@model SepetViewModel
+<section id="cart_items">
+    <div class="container">
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li><a href="/Home/Index">Ana Sayfa</a></li>
+                <li class="active">Alışveriş Sepeti</li>
+
+            </ol>
+        </div>
+        <div class="table-responsive cart_info">
+            <table class="table table-condensed">
+                <thead>
+                    <tr class="cart_menu">
+                        <td class="image">Ürün</td>
+                        <td class="description"></td>
+                        <td class="price">Birim Fiyat</td>
+                        <td class="quantity">Adet</td>
+                        <td class="total">Toplam Tutar</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model.SepetUrunleri)
+                    {
+                        <tr>
+                            <td class="cart_product">
+                                <a onclick="UrunResimGetir('')">
+                                    <img height="120" src="@(
+                                    item.Urun.UrunResims.ToList()[0].ResimUrl)" alt="">
+                                </a>
+                            </td>
+                            <td class="cart_description">
+                                @*     <h4><a href="">@item.Urun.UrunAdi</a></h4>
+                            <p>Ürün Kodu: @item.Urun.UrunKodu</p> *@
+                            </td>
+                            <td class="cart_price">
+                                <p>@item.Urun.UrunAdi</p>
+                            </td>
+                            <td class="cart_quantity">
+                                <div class="cart_quantity_button">
+                                    <a class="cart_quantity_up" href="/Sepet/SepetArtir/@item.UrunId"> + </a>
+                                    <input class="cart_quantity_input" type="text" name="quantity" value="@item.Adet" autocomplete="off" size="2">
+                                    <a class="cart_quantity_down" href="/Sepet/SepetAzalt/@item.UrunId"> - </a>
+                                </div>
+                            </td>
+                            <td class="cart_total">
+                                <p class="cart_total_price">@(
+                                    item.Urun.UrunFiyats.SingleOrDefault(x => x.FiyatTipiId == 4).UrunFiyati.Value * item.Adet.Value)
+
+                                    </p>
+                            </td>
+                            <td class="cart_delete">
+                                <a class="cart_quantity_delete" href="/Sepet/SepetSil/@item.UrunId"><i class="fa fa-times"></i></a>
+                            </td>
+                        </tr>
+
+                    }
+
+
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section> <!--/#cart_items-->
+
+<section id="do_action">
+    <div class="container">
+        <div class="heading">
+            <h3>What would you like to do next?</h3>
+            <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="chose_area">
+                    <ul class="user_option">
+                        <li>
+                            <input type="checkbox">
+                            <label>Use Coupon Code</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label>Use Gift Voucher</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label>Estimate Shipping & Taxes</label>
+                        </li>
+                    </ul>
+                    <ul class="user_info">
+                        <li class="single_field">
+                            <label>Country:</label>
+                            <select>
+                                <option>United States</option>
+                                <option>Bangladesh</option>
+                                <option>UK</option>
+                                <option>India</option>
+                                <option>Pakistan</option>
+                                <option>Ucrane</option>
+                                <option>Canada</option>
+                                <option>Dubai</option>
+                            </select>
+
+                        </li>
+                        <li class="single_field">
+                            <label>Region / State:</label>
+                            <select>
+                                <option>Select</option>
+                                <option>Dhaka</option>
+                                <option>London</option>
+                                <option>Dillih</option>
+                                <option>Lahore</option>
+                                <option>Alaska</option>
+                                <option>Canada</option>
+                                <option>Dubai</option>
+                            </select>
+
+                        </li>
+                        <li class="single_field zip-field">
+                            <label>Zip Code:</label>
+                            <input type="text">
+                        </li>
+                    </ul>
+                    <a class="btn btn-default update" href="">Get Quotes</a>
+                    <a class="btn btn-default check_out" href="">Continue</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="total_area">
+                    <ul>
+                        <li>Toplam Tutar <span>@Model.ToplamTutar</span></li>
+                      
+                    </ul>
+                    <a class="btn btn-default update" href="">Update</a>
+                    <a class="btn btn-default check_out" href="/OdemeAl/Index">Ödeme Yap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--/#do_action-->
+@section scripts
+{
+    <script>
+
+        function UrunResimGetir(resim) {
+
+            $("#UrunResim").attr("src", resim);
+            $("#resimmodal").modal("show");
+        }
+    </script>
+}

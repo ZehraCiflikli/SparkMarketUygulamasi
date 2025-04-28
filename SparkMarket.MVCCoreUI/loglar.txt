@@ -1,0 +1,52 @@
+Sayfa Bulunamadı HatasıSayfa Bulunamadı HatasıSayfa Bulunamadı HatasıHata Tarihi:5.02.2025 20:08:57 Hata Mesajı :An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+Hata Tarihi:5.02.2025 20:11:43 Hata Mesajı :An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+Hata Tarihi:5.02.2025 21:02:18 Hata Mesajı :An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+Hata Tarihi:7.02.2025 18:29:49 Hata Mesajı :Object reference not set to an instance of an object.
+Hata Tarihi:7.02.2025 19:08:01 Hata Mesajı :Attempt by method 'AspNetCoreGeneratedDocument.Areas_AdminPanel_Views_Urun_Add#8.ExecuteAsync()' to access method 'AspNetCoreGeneratedDocument.Areas_AdminPanel_Views_Urun_Add+<ExecuteAsync>d__18..ctor()' failed.
+Hata Tarihi:7.02.2025 19:08:06 Hata Mesajı :Attempt by method 'AspNetCoreGeneratedDocument.Areas_AdminPanel_Views_Urun_Add#8.ExecuteAsync()' to access method 'AspNetCoreGeneratedDocument.Areas_AdminPanel_Views_Urun_Add+<ExecuteAsync>d__18..ctor()' failed.
+Hata Tarihi:7.02.2025 19:24:26 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.UrunController'. There should only be one applicable constructor.
+Hata Tarihi:7.02.2025 19:24:41 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.UrunController'. There should only be one applicable constructor.
+Hata Tarihi:7.02.2025 19:24:43 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.UrunController'. There should only be one applicable constructor.
+Hata Tarihi:7.02.2025 19:24:43 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.UrunController'. There should only be one applicable constructor.
+Hata Tarihi:7.02.2025 19:24:44 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.UrunController'. There should only be one applicable constructor.
+Hata Tarihi:7.02.2025 19:24:49 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.UrunController'. There should only be one applicable constructor.
+Hata Tarihi:7.02.2025 19:24:56 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.UrunController'. There should only be one applicable constructor.
+Hata Tarihi:7.02.2025 19:24:57 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.UrunController'. There should only be one applicable constructor.
+Hata Tarihi:7.02.2025 19:24:57 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.UrunController'. There should only be one applicable constructor.
+Hata Tarihi:7.02.2025 19:25:05 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.UrunController'. There should only be one applicable constructor.
+Hata Tarihi:7.02.2025 19:25:06 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.UrunController'. There should only be one applicable constructor.
+Hata Tarihi:7.02.2025 19:25:07 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.UrunController'. There should only be one applicable constructor.
+Hata Tarihi:7.02.2025 19:25:24 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.UrunController'. There should only be one applicable constructor.
+Hata Tarihi:7.02.2025 20:26:25 Hata Mesajı :Attempt by method 'AspNetCoreGeneratedDocument.Areas_AdminPanel_Views_Urun_Add#1.ExecuteAsync()' to access method 'AspNetCoreGeneratedDocument.Areas_AdminPanel_Views_Urun_Add+<ExecuteAsync>d__18..ctor()' failed.
+Hata Tarihi:7.02.2025 20:26:29 Hata Mesajı :Attempt by method 'AspNetCoreGeneratedDocument.Areas_AdminPanel_Views_Urun_Add#1.ExecuteAsync()' to access method 'AspNetCoreGeneratedDocument.Areas_AdminPanel_Views_Urun_Add+<ExecuteAsync>d__18..ctor()' failed.
+Hata Tarihi:7.02.2025 20:26:30 Hata Mesajı :Attempt by method 'AspNetCoreGeneratedDocument.Areas_AdminPanel_Views_Urun_Add#1.ExecuteAsync()' to access method 'AspNetCoreGeneratedDocument.Areas_AdminPanel_Views_Urun_Add+<ExecuteAsync>d__18..ctor()' failed.
+Hata Tarihi:10.02.2025 18:48:46 Hata Mesajı :Value cannot be null. (Parameter 'path')
+Hata Tarihi:10.02.2025 19:35:41 Hata Mesajı :Value cannot be null. (Parameter 'path2')
+Hata Tarihi:10.02.2025 19:37:18 Hata Mesajı :Value cannot be null. (Parameter 'path2')
+Hata Tarihi:12.02.2025 21:11:59 Hata Mesajı :Object reference not set to an instance of an object.
+Hata Tarihi:12.02.2025 21:16:00 Hata Mesajı :The layout page '/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml' cannot find the section 'ContentHeader' in the content page '/Areas/AdminPanel/Views/Menu/MenuYetki.cshtml'.
+Hata Tarihi:12.02.2025 21:16:14 Hata Mesajı :The layout page '/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml' cannot find the section 'ContentHeader' in the content page '/Areas/AdminPanel/Views/Menu/MenuYetki.cshtml'.
+Hata Tarihi:12.02.2025 21:16:31 Hata Mesajı :The layout page '/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml' cannot find the section 'ContentHeader' in the content page '/Areas/AdminPanel/Views/Menu/MenuYetki.cshtml'.
+Hata Tarihi:14.02.2025 14:23:19 Hata Mesajı :Unexpected 'asp-for' expression result type 'System.Nullable`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]' for <input>. 'asp-for' must be of type 'System.Boolean' or 'System.String' that can be parsed as a 'System.Boolean' if 'type' is 'checkbox'.
+Hata Tarihi:14.02.2025 15:43:07 Hata Mesajı :An error occurred while saving the entity changes. See the inner exception for details.
+Hata Tarihi:14.02.2025 15:44:37 Hata Mesajı :An error occurred while saving the entity changes. See the inner exception for details.
+Hata Tarihi:14.02.2025 15:47:09 Hata Mesajı :An error occurred while saving the entity changes. See the inner exception for details.
+Hata Tarihi:14.02.2025 15:47:23 Hata Mesajı :An error occurred while saving the entity changes. See the inner exception for details.
+Hata Tarihi:14.02.2025 15:47:42 Hata Mesajı :An error occurred while saving the entity changes. See the inner exception for details.
+Hata Tarihi:14.02.2025 15:50:07 Hata Mesajı :An error occurred while saving the entity changes. See the inner exception for details.
+Hata Tarihi:14.02.2025 17:47:49 Hata Mesajı :Object reference not set to an instance of an object.
+Hata Tarihi:14.02.2025 17:48:50 Hata Mesajı :Unexpected 'asp-for' expression result type 'SparkMarket.Model.Entity.Rol' for <input>. 'asp-for' must be of type 'System.Boolean' or 'System.String' that can be parsed as a 'System.Boolean' if 'type' is 'checkbox'.
+Hata Tarihi:14.02.2025 17:57:01 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.KullaniciController'. There should only be one applicable constructor.
+Hata Tarihi:14.02.2025 17:57:14 Hata Mesajı :Multiple constructors accepting all given argument types have been found in type 'SparkMarket.MVCCoreUI.Areas.AdminPanel.Controllers.KullaniciController'. There should only be one applicable constructor.
+Hata Tarihi:14.02.2025 19:12:20 Hata Mesajı :The view 'Index' was not found. The following locations were searched:
+/Areas/AdminPanel/Views/Menu/Index.cshtml
+/Areas/AdminPanel/Views/Shared/Index.cshtml
+/Views/Shared/Index.cshtml
+Hata Tarihi:7.03.2025 19:31:59 Hata Mesajı :Cannot create a DbSet for 'Rapor' because this type is not included in the model for the context.
+Hata Tarihi:7.03.2025 19:32:10 Hata Mesajı :Cannot create a DbSet for 'Rapor' because this type is not included in the model for the context.
+Hata Tarihi:7.03.2025 19:32:19 Hata Mesajı :Cannot create a DbSet for 'Rapor' because this type is not included in the model for the context.
+Hata Tarihi:7.03.2025 19:32:20 Hata Mesajı :Cannot create a DbSet for 'Rapor' because this type is not included in the model for the context.
+Hata Tarihi:7.03.2025 19:33:32 Hata Mesajı :Cannot create a DbSet for 'Rapor' because this type is not included in the model for the context.
+Hata Tarihi:7.03.2025 19:33:40 Hata Mesajı :Cannot create a DbSet for 'Rapor' because this type is not included in the model for the context.
+Hata Tarihi:7.03.2025 19:34:19 Hata Mesajı :Cannot create a DbSet for 'Rapor' because this type is not included in the model for the context.
+Hata Tarihi:7.03.2025 19:35:15 Hata Mesajı :Cannot create a DbSet for 'Rapor' because this type is not included in the model for the context.

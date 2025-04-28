@@ -1,0 +1,20 @@
+
+https://hub.docker.com/welcome 
+Docker Desktop Manager indirip kurdum. Yeniden başlattım..
+
+
+// Redis Arayüz Programı
+
+https://github.com/qishibo/AnotherRedisDesktopManager/releases
+
+
+
+
+docker pull redis/redis-stack-server:latest
+docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server:latest
+
+
+
+
+
+

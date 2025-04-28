@@ -1,0 +1,129 @@
+﻿@section ContentHeader
+{
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalOdemeTuruEkle">
+        Ödeme Türü Ekle
+    </button>
+}
+
+@model OdemeTuruIndexViewModel
+<div class="col-12">
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Ödeme Türü Listesi</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <table id="tblOdemeTuru" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Ödeme Türü Adı</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+
+</div>
+
+@section Styles {
+
+    <link href="~/adminassets/plugins/bootstrap-switch/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" />
+
+    <style>
+        .select2-container .select2-selection--single {
+            height: 40px;
+        }
+    </style>
+
+}
+<form id="frmOdemeTuruEkle">
+    <div class="modal fade" id="modalOdemeTuruEkle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Ödeme Türü Ekleme Paneli</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Ödeme Türü Adı</label>
+                            <input type="text" class="form-control" asp-for="OdemeTuruAdi" placeholder="Ödeme Türü Adı">
+                        </div>
+
+                    </div>
+                    <!-- /.card-body -->
+
+
+
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">VAZGEÇ</button>
+                    <button type="button" id="btnOdemeTuruEkle" class="btn btn-primary">KAYDET</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</form>
+
+<form id="frmOdemeTuruGuncelle">
+    <div class="modal fade" id="modalOdemeTuruGuncelle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Ödeme Türü Güncelleme Paneli</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="GId">
+
+                            <label>Ödeme Türü Adı</label>
+                            <input type="text" class="form-control" id="GOdemeTuruAdi" placeholder="Ödeme Türü">
+                        </div>
+
+
+                    </div>
+                    <!-- /.card-body -->
+
+
+
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">VAZGEÇ</button>
+                    <button type="button" id="btnOdemeTuruGuncelle" class="btn btn-primary">GÜNCELLE</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</form>
+
+
+
+@section Scripts {
+
+
+    <script src="~/adminassets/js/custom/odemeturu.js"></script>
+
+}

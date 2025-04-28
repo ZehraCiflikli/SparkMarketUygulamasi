@@ -1,0 +1,187 @@
+﻿@section ContentHeader
+{
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalUrunEkle">
+        Kategori Ekle
+    </button>
+}
+
+@model KategoriIndexViewModel
+<div class="col-12">
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Kategori Listesi</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <table id="tblKategoriler" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Kategori Adı</th>
+                        <th>Açıklama</th>
+                        <th>Resim</th>
+                        <th>Üst Kategori</th>
+                        <th>Üst Kategori Görünüm</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+
+</div>
+
+@section Styles {
+
+    <link href="~/adminassets/plugins/bootstrap-switch/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" />
+
+    <style>
+        .select2-container .select2-selection--single {
+            height: 40px;
+        }
+    </style>
+
+}
+<form id="frmKategoriEkle">
+    <div class="modal fade" id="modalUrunEkle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Kategori Ekleme Paneli</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Kategori Adı</label>
+                            <input type="text" class="form-control" asp-for="KategoriAdi" placeholder="Kategori Adı">
+                        </div>
+                        <div class="form-group">
+                            <label>Açıklama</label>
+                            <textarea id="txtAciklama" asp-for="Aciklama"></textarea>
+
+
+                        </div>
+
+                        <div class="form-group">
+                            <label>Üst Kategori</label>
+                            <select asp-for=UstKategoriId asp-items="@Model.UstKategoriListe" class="form-control select2" style="width:100%; height:100px;">
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Resim</label>
+                            <input asp-for=FUResim type="file" />
+                        </div>
+
+                    </div>
+                    <!-- /.card-body -->
+
+
+
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">VAZGEÇ</button>
+                    <button type="button" id="btnKategoriEkle" class="btn btn-primary">KAYDET</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</form>
+
+<form id="frmKategoriGuncelle">
+    <div class="modal fade" id="modalUrunGuncelle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Kategori Güncelleme Paneli</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="GId">
+
+                            <label>Kategori Adı</label>
+                            <input type="text" class="form-control" id="GKategoriAdi" placeholder="Kategori Adı">
+                        </div>
+                        <div class="form-group">
+                            <label>Açıklama</label>
+                            <textarea id="GAciklama"></textarea>
+
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Üst Kategori</label>
+                            <select id="GUstKategoriId" asp-items="@Model.UstKategoriListe" class="form-control select2" style="width:100%; height:100px;">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Resim</label>
+                            <br />
+                            <img id="GResim" src="/adminassets/img/catimage.png" width="120" />
+                            <input id="GFUResim" type="file" />
+                        </div>
+
+                    </div>
+                    <!-- /.card-body -->
+
+
+
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">VAZGEÇ</button>
+                    <button type="button" id="btnKategoriGuncelle" class="btn btn-primary">GÜNCELLE</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</form>
+<div class="modal fade" id="modalCategoryImage">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="categoryname"></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <img id="imgcategory" src="" width="100%" />
+
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+@section Scripts {
+
+
+    <script src="~/adminassets/js/custom/kategori.js"></script>
+
+}

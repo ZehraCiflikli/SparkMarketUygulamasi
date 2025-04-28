@@ -1,0 +1,38 @@
+﻿@model KullaniciVm
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Kullanici Guncelle</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <input type="hidden" asp-for="Aktif" value="@Model.Aktif" />
+                <input type="hidden" asp-for="Id" value="@Model.Id" />
+                <label asp-for="Adi">Kullanıcı Adı</label>
+                <input asp-for="Adi" type="text" value="@Model.Adi" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Soyadi">Kullanıcı Soyadı</label>
+                <input asp-for="Soyadi" type="text" value="@Model.Soyadi" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Email">Email</label>
+                <input asp-for="Email" type="email" value="@Model.Email" class="form-control" />
+            </div>               
+            <div class="form-group">
+                <label asp-for="Sifre">Sifre</label>
+                <input asp-for="Sifre" type="password" value="@Model.Sifre" class="form-control" />
+            </div>
+        </div>
+
+        <div class="modal-footer justify-content-between">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+            <button type="button" class="btn btn-primary" id="btnUpdate">Guncelle</button>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->

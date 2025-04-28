@@ -1,0 +1,75 @@
+﻿@model List<KullaniciVm>
+<div class="col-12">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Kullanıcılar</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Ad</th>
+                        <th>Soyad</th>
+                        <th>Email</th>
+                        <th>Roller</th>
+                        <th>Aktif</th>
+                        <th>Kullanıcı Rol</th>
+                        <th>Düzenle</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int sayi = 1;
+                    }
+                    @foreach (var item in Model)
+                    {
+                        string check = item.Aktif == true ? "checked" : "";
+
+                        <tr>
+                            <td>@sayi</td>
+                            <td>@item.Adi</td>
+                            <td>@item.Soyadi</td>
+                            <td>@item.Email</td>
+                            <td>@string.Join(",", item.Roller)</td>
+
+                            <td><input type="checkbox" value="@item.Id" name="my-checkbox" data-on-text="AKTİF" data-off-text="PASİF" @check data-bootstrap-switch data-off-color="danger" data-on-color="success"></td>
+                            <td>
+                                <button class="btn btn-secondary btn-sm" onclick="RolModal(@item.Id)">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>Kullanici Roller
+                                </button>
+                            </td>
+                            <td>
+
+                                <div class="d-flex">
+                                    <button class="btn btn-primary mr-3 ml-3 btn-sm" onclick="UpdateModal(@item.Id)">
+                                        <i class="fas fa-pencil-alt">
+                                        </i> Düzenle
+                                    </button>
+                                    <button class="btn btn-info btn-sm" onclick="DigerBilgiler(@item.Id)">
+                                        <i class="fas fa-book"></i> Diger Bilgiler
+                                    </button>
+                                </div>
+
+                            </td>
+                            <td>
+
+                                <button class="btn btn-danger btn-sm" onclick="DeleteModal(@item.Id)">
+                                    <i class="fas fa-trash">
+                                    </i> Sil
+                                </button>
+
+                            </td>
+                        </tr>
+                        sayi++;
+                    }
+                </tbody>
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+</div>
+
